@@ -47,6 +47,8 @@ body {
 
 .section__wrapper {
   margin: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .wrapper__sidebar {
@@ -55,7 +57,56 @@ body {
   background: #F5F5F5;
   border: none;
   border-radius: 10px;
+  padding: 10px;
 }
-.sidebar__content {
-  margin: 10px;
+.header__title {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+.header__search {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1.5px solid #EEEEEE;
+  border-radius: 5px;
+  margin-top: 4px;
+}
+
+.search__icon {
+  margin: 5px 10px;
+}
+.search__text {
+  height: 28px;
+  padding-top: 3px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.search__text::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.inner__wrapper_sticker {
+  width: 800px;
+  height: 540px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+  overflow: scroll;
+}
+.inner__wrapper_sticker::-webkit-scrollbar {
+  display: none;
+}
+
+.sticker__card {
+  width: 240px;
+  height: 240px;
+  background: #FDF3B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

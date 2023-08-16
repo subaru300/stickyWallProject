@@ -22,6 +22,8 @@ body {
 
     &__wrapper {
         margin: 20px;
+        display: flex;
+        gap: 20px;
     }
 }
 .wrapper {
@@ -32,6 +34,7 @@ body {
         background: $sidebar-bg;
         border: none;
         border-radius: 10px;
+        padding: 10px;
     }
 
     &__main {
@@ -40,7 +43,6 @@ body {
 .sidebar {
 
     &__content {
-        margin: 10px;
     }
 
     &__header {
@@ -55,17 +57,39 @@ body {
     }
 
     &__title {
+        font-size: 28px;
+        font-weight: 600;
+        color: $sidebar-text-black;
     }
 
     &__search {
+        height: 28px;
+        display: flex;
+        align-items: center;
+        background: none;
+        border: 1.5px solid $sidebar-border-gray;
+        border-radius: 5px;
+        margin-top: 4px;
     }
 }
 .search {
 
     &__icon {
+        margin: 5px 10px;
     }
 
     &__text {
+        height: 28px;
+        padding-top: 3px;
+        border: none;
+        background: none;
+        outline: none;
+        
+        &::placeholder {
+            font-size: 16px;
+            font-weight: 500;
+            color: $sidebar-text-black;
+        }
     }
 }
 .main {
@@ -120,6 +144,56 @@ body {
     }
 
     &__text {
+    }
+}
+
+// main content
+
+.wrapper {
+
+    &__main {
+    }
+}
+.main {
+
+    &__title {
+    }
+
+    &__inner {
+    }
+}
+.title {
+
+    &__text {
+    }
+}
+.inner {
+
+    &__wrapper {
+
+        &_sticker {
+            width: 800px;
+            height: 540px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+            // grid-template-columns: repeat(3, 1fr);
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}
+.sticker {
+
+    &__card {
+        width: 240px;
+        height: 240px;
+        background: $yellow-sticker;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

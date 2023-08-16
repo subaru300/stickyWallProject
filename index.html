@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>stickyWallProject</title>
-  </head>
-  <body>
-    <script src="script/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>stickyWallProject</title>
+</head>
+<body>
+
+  <div class="app__section">
+    <div class="section__wrapper">
+      <!-- wrapper for all app -->
+      <div class="wrapper__sidebar">
+        <div class="sidebar__content">
+          <!-- sidebar header -->
+          <div class="sidebar__header">
+            <div class="header__text">
+              <h2 class="header__title">Menu</h2>
+            </div>
+            <div class="header__search">
+              <img class="search__icon" src="images/search-icon.png" alt="">
+              <h3 class="search__text">Search</h3>
+            </div>
+          </div>
+          <!-- sidebar main -->
+          <div class="sidebar__main">
+            <!-- task section -->
+            <div class="main__task">
+              <h2 class="task__title">Tasks</h2>
+              <!-- first task -->
+              <div class="task__upcoming">
+                <img class="upcoming__icon" src="images/upcoming-icon.png" alt="">
+                <h3 class="upcoming__text">Upcoming</h3>
+              </div>
+              <!-- second task -->
+              <div class="task__today">
+                <img class="today__icon" src="images/today-icon.png" alt="">
+                <h3 class="today__text">Today</h3>
+              </div>
+              <!-- third task -->
+              <div class="task__calendar">
+                <img class="calendar__icon" src="images/calendar-icon.png" alt="">
+                <h3 class="calendar__text">Calendar</h3>
+              </div>
+              <!-- fourth task -->
+              <div class="task__stickywall">
+                <img class="stickywall__icon" src="images/stickywall-icon.png" alt="">
+                <h3 class="stickywall__text">Sticky Wall</h3>
+              </div>
+            </div>
+            <!-- list section -->
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__main"></div>
+    </div>
+  </div>
+
+
+  <script src="script/script.js"></script>
+</body>
 </html>

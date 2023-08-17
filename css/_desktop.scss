@@ -32,6 +32,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 10px;
+    -webkit-user-select: none;
   }
 
   &__main {
@@ -103,55 +104,93 @@ body {
     display: flex;
     align-items: center;
     gap: 18px;
+    height: 28px;
     margin: 5px 0 0 0;
-    padding: 8px 4px 0 4px;
     cursor: pointer;
+<<<<<<< HEAD
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+=======
 
     &:hover {
       background: #eaeaea;
       border-radius: 4px;
+>>>>>>> e1cde2734e76e8309a472a864385925eec5bed9a
     }
+    
+    &__active {
+      background: #EAEAEA;
   }
 
   &__today {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
   }
 
   &__calendar {
     cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
   }
 
   &__stickywall {
     cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
   }
 }
 .upcoming {
   &__icon {
-  }
-
-  &__text {
+    margin: 5px 0 4px 8px;
   }
 }
 .today {
   &__icon {
+    margin: 5px 0 4px 8px;
   }
 
-  &__text {
-  }
 }
 .calendar {
   &__icon {
+    margin: 5px 0 4px 8px;
   }
 
-  &__text {
-  }
 }
 .stickywall {
   &__icon {
+    margin: 5px 0 4px 8px;
   }
 
-  &__text {
-  }
 }
 
 // main content
@@ -200,12 +239,140 @@ body {
 }
 
 /* hr one */
+<<<<<<< HEAD
+.hr_one{
+    width: 260px;
+    height: 1.5px;
+    background-color: #EEEEEE;
+    margin-top: 25px;
+  }
+  
+  /* Task */
+  
+  // .task__title{
+  //   opacity: 60%;
+  //   padding-top: 20px;
+  //   padding-left: 10px;
+  // }
+  
+  /* Upcoming */
+  
+  // .task__upcoming{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-top: 4px;
+  //   padding-left: 10px;
+  //   padding-bottom: 4px;
+  //   box-sizing: border-box;
+  // }
+  
+  // .task__upcoming:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
+  
+  // .upcoming__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  //   padding-bottom: 3px;
+  // }
+  
+  // .upcoming__icon{
+  //   padding-right: 15px;
+  // }
+  
+  // /* Today */
+  
+  // .task__today{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-left: 10px;
+  //   padding-top: 6px;
+  //   padding-bottom: 6px;
+  // }
+  
+  // .task__today:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
+  
+  // .today__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  // }
+  
+  // .today__icon{
+  //   padding-right: 18.5px;
+  // }
+  
+  // /* Calendar */
+  
+  // .task__calendar{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-left: 10px;
+  //   padding-bottom: 6px;
+  //   padding-top: 6px;
+  // }
+  
+  // .task__calendar:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
+  
+  // .calendar__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  // }
+  
+  // .calendar__icon{
+  //   padding-right: 15px;
+  // }
+  
+  // /* sticky */
+  
+  // .task__stickywall{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-left: 10px;
+  //   padding-top: 6px;
+  //   padding-bottom: 6px;
+  // }
+  
+  // .task__stickywall:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
+  
+  // .stickywall__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  // }
+  
+  // .stickywall__icon{
+  //   padding-right: 15px;
+  // }
+  
+  // /* hr_two */
+  
+  // .hr_two{
+  //   width: 260px;
+  //   height: 1.5px;
+  //   background-color: #EEEEEE;
+  //   margin-top: 10px;
+  // }
+=======
 .hr_one {
   width: 260px;
   height: 1.5px;
   background-color: #eeeeee;
   margin-top: 25px;
 }
+>>>>>>> e1cde2734e76e8309a472a864385925eec5bed9a
 
 /* Task */
 

@@ -58,6 +58,7 @@ body {
   border: none;
   border-radius: 10px;
   padding: 10px;
+  -webkit-user-select: none;
 }
 .header__title {
   font-size: 28px;
@@ -106,22 +107,80 @@ body {
   display: flex;
   align-items: center;
   gap: 18px;
+  height: 28px;
   margin: 5px 0 0 0;
-  padding: 8px 4px 0 4px;
   cursor: pointer;
+<<<<<<< HEAD
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
+=======
 }
 .task__upcoming:hover {
   background: #eaeaea;
+>>>>>>> e1cde2734e76e8309a472a864385925eec5bed9a
   border-radius: 4px;
+}
+.task__active {
+  background: #EAEAEA;
 }
 .task__today {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  margin: 5px 0 0 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
 }
 .task__calendar {
   cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  margin: 5px 0 0 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
 }
 .task__stickywall {
   cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  margin: 5px 0 0 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
+}
+
+.upcoming__icon {
+  margin: 5px 0 4px 8px;
+}
+
+.today__icon {
+  margin: 5px 0 4px 8px;
+}
+
+.calendar__icon {
+  margin: 5px 0 4px 8px;
+}
+
+.stickywall__icon {
+  margin: 5px 0 4px 8px;
 }
 
 .inner__wrapper_sticker {
@@ -155,6 +214,9 @@ body {
 }
 
 /* Task */
+<<<<<<< HEAD
+/* Upcoming *//*# sourceMappingURL=style.css.map */
+=======
 /* Upcoming */
 .task__upcoming:hover {
   background: #eaeaea;
@@ -250,3 +312,4 @@ body {
   background-color: #eeeeee;
   margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
+>>>>>>> e1cde2734e76e8309a472a864385925eec5bed9a

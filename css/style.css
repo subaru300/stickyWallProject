@@ -90,6 +90,19 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.task__upcoming {
+  cursor: pointer;
+}
+.task__today {
+  cursor: pointer;
+}
+.task__calendar {
+  cursor: pointer;
+}
+.task__stickywall {
+  cursor: pointer;
+}
+
 .inner__wrapper_sticker {
   width: 800px;
   height: 540px;

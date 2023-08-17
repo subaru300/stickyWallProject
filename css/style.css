@@ -85,11 +85,6 @@ body {
   background: none;
   outline: none;
 }
-.search__text::-moz-placeholder {
-  font-size: 16px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
-}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -187,10 +182,21 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
-  grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
   overflow: scroll;
 }
 .inner__wrapper_sticker::-webkit-scrollbar {
+  display: none;
+}
+.inner__wrapper_sticker__wrapper_sticker {
+  width: 800px;
+  height: 540px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+  grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
+  overflow: scroll;
+}
+.inner__wrapper_sticker__wrapper_sticker::-webkit-scrollbar {
   display: none;
 }
 
@@ -201,23 +207,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
 }
 
 .card-add {
   font-size: 48px;
-}
-
-/* hr one */
-.hr_one {
-  width: 260px;
-  height: 1.5px;
-  background-color: #eeeeee;
-  margin-top: 25px;
-}
-
-/* Task */
-/* Upcoming *//*# sourceMappingURL=style.css.map */
-=======
 }/*# sourceMappingURL=style.css.map */
->>>>>>> origin/main

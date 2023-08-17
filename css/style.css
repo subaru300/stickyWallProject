@@ -179,6 +179,7 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+  grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
   overflow: scroll;
 }
 .inner__wrapper_sticker::-webkit-scrollbar {
@@ -192,15 +193,4 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* hr one */
-.hr_one {
-  width: 260px;
-  height: 1.5px;
-  background-color: #EEEEEE;
-  margin-top: 25px;
-}
-
-/* Task */
-/* Upcoming *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -184,6 +184,77 @@ body {
   }
 }
 
+// sidebar list
+
+.main {
+  // here nothing write yet
+  &__list {
+  }
+}
+.list {
+// here line between task and list
+  &__line {
+  }
+// here title for list text
+  &__title {
+  }
+// here personal is parent div
+  &__personal {
+  }
+// here work is parent div
+  &__work {
+  }
+// here list1 is parent div
+  &__list1 {
+  }
+  // here newlist is parent div
+  &__newlist {
+  }
+}
+.personal {
+// here you have small red bg: red
+  &__red {
+  }
+// here you have small rectangle with number 3 bg: gray;
+  &__number {
+  }
+}
+.work {
+// here you have small blue bg: blue
+  &__blue {
+  }
+// here you have small rectangle with number 3 bg: gray;
+  &__number {
+  }
+}
+.list1 {
+// here you have small yello bg: yello
+  &__yellow {
+  }
+// here you have small rectangle with number 3 bg: gray;
+  &__number {
+  }
+}
+.newlist {
+// here you have icon for add new list
+  &__icon {
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // main content
 
 .wrapper {
@@ -202,6 +273,7 @@ body {
   }
 }
 .inner {
+<<<<<<< HEAD
   &__wrapper {
     &_sticker {
       width: 800px;
@@ -213,6 +285,23 @@ body {
       &::-webkit-scrollbar {
         display: none;
       }
+=======
+
+    &__wrapper {
+
+        &_sticker {
+            width: 800px;
+            height: 540px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+            grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+>>>>>>> origin/main
     }
   }
 }
@@ -226,6 +315,7 @@ body {
     justify-content: center;
   }
 }
+<<<<<<< HEAD
 .card-add {
   font-size: 48px;
 }
@@ -356,3 +446,7 @@ body {
 //   background-color: #EEEEEE;
 //   margin-top: 10px;
 // }
+=======
+
+
+>>>>>>> origin/main

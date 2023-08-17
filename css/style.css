@@ -187,37 +187,31 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
-  grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
   overflow: scroll;
 }
 .inner__wrapper_sticker::-webkit-scrollbar {
   display: none;
 }
-
-.sticker__card {
+.inner__wrapper_sticker__wrapper_sticker {
+  width: 800px;
+  height: 540px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+  grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
+  overflow: scroll;
+}
+.inner__wrapper_sticker__wrapper_sticker::-webkit-scrollbar {
+  display: none;
+}
+.inner .sticker__card {
   width: 240px;
   height: 240px;
   background: #FDF3B5;
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
 }
-
-.card-add {
+.inner .card-add {
   font-size: 48px;
-}
-
-/* hr one */
-.hr_one {
-  width: 260px;
-  height: 1.5px;
-  background-color: #eeeeee;
-  margin-top: 25px;
-}
-
-/* Task */
-/* Upcoming *//*# sourceMappingURL=style.css.map */
-=======
 }/*# sourceMappingURL=style.css.map */
->>>>>>> origin/main

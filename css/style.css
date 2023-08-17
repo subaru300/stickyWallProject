@@ -80,15 +80,32 @@ body {
 .search__text {
   height: 28px;
   padding-top: 3px;
-  padding-bottom: 3px;
   border: none;
   background: none;
   outline: none;
+}
+.search__text::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
 }
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.task__upcoming {
+  cursor: pointer;
+}
+.task__today {
+  cursor: pointer;
+}
+.task__calendar {
+  cursor: pointer;
+}
+.task__stickywall {
+  cursor: pointer;
 }
 
 .inner__wrapper_sticker {
@@ -110,7 +127,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
 }/*# sourceMappingURL=style.css.map */
 
 
 
+=======
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> b973e5dcfc37035840a37f5036c48c9cd3dde647

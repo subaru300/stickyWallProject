@@ -86,6 +86,11 @@ body {
   background: none;
   outline: none;
 }
+.search__text::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -203,32 +208,6 @@ body {
 .sticker__card {
   width: 240px;
   height: 240px;
-  background: #FDF3B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-add {
-  font-size: 48px;
-}
-
-.sticker__card {
-  width: 240px;
-  height: 240px;
-  background: #FDF3B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-add {
-  font-size: 48px;
-}
-
-.sticker__card {
-  width: 240px;
-  height: 240px;
   border-radius: 10px;
   background: #BFCCBA;
   align-items: center;
@@ -237,9 +216,6 @@ body {
   outline: none;
   overflow: scroll;
   padding: 10px;
-}
-.sticker__card::-webkit-scrollbar {
-  display: none;
 }
 
 .card-add {

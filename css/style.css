@@ -85,6 +85,11 @@ body {
   background: none;
   outline: none;
 }
+.search__text::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -105,10 +110,16 @@ body {
   height: 28px;
   margin: 5px 0 0 0;
   cursor: pointer;
+<<<<<<< HEAD
   font-size: 16px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   transition: 0.6s ease;
+=======
+}
+.task__upcoming:hover {
+  background: #eaeaea;
+>>>>>>> e1cde2734e76e8309a472a864385925eec5bed9a
   border-radius: 4px;
 }
 .task__active {
@@ -179,6 +190,7 @@ body {
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
   overflow: scroll;
+  font-size: 48px;
 }
 .inner__wrapper_sticker::-webkit-scrollbar {
   display: none;
@@ -197,9 +209,107 @@ body {
 .hr_one {
   width: 260px;
   height: 1.5px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   margin-top: 25px;
 }
 
 /* Task */
+<<<<<<< HEAD
 /* Upcoming *//*# sourceMappingURL=style.css.map */
+=======
+/* Upcoming */
+.task__upcoming:hover {
+  background: #eaeaea;
+  border-radius: 4px;
+}
+
+.upcoming__text {
+  opacity: 60%;
+  font-weight: 500;
+  padding-bottom: 3px;
+}
+
+.upcoming__icon {
+  padding-right: 15px;
+}
+
+/* Today */
+.task__today {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 18px;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.task__today:hover {
+  background: #eaeaea;
+  border-radius: 4px;
+}
+
+.today__text {
+  opacity: 60%;
+  font-weight: 500;
+}
+
+.today__icon {
+  padding-right: 18.5px;
+}
+
+/* Calendar */
+.task__calendar {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 18px;
+  padding-left: 10px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.task__calendar:hover {
+  background: #eaeaea;
+  border-radius: 4px;
+}
+
+.calendar__text {
+  opacity: 60%;
+  font-weight: 500;
+}
+
+.calendar__icon {
+  padding-right: 15px;
+}
+
+/* sticky */
+.task__stickywall {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 18px;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.task__stickywall:hover {
+  background: #eaeaea;
+  border-radius: 4px;
+}
+
+.stickywall__text {
+  opacity: 60%;
+  font-weight: 500;
+}
+
+.stickywall__icon {
+  padding-right: 15px;
+}
+
+/* hr_two */
+.hr_two {
+  width: 260px;
+  height: 1.5px;
+  background-color: #eeeeee;
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> e1cde2734e76e8309a472a864385925eec5bed9a

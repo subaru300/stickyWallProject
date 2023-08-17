@@ -85,6 +85,11 @@ body {
   background: none;
   outline: none;
 }
+.search__text::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -112,7 +117,7 @@ body {
   border-radius: 4px;
 }
 .task__active {
-  background: #EAEAEA;
+  background: #eaeaea;
 }
 .task__today {
   cursor: pointer;
@@ -194,11 +199,15 @@ body {
   justify-content: center;
 }
 
+.card-add {
+  font-size: 48px;
+}
+
 /* hr one */
 .hr_one {
   width: 260px;
   height: 1.5px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   margin-top: 25px;
 }
 

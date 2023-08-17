@@ -179,6 +179,19 @@ body {
   margin: 5px 0 4px 8px;
 }
 
+.list__title {
+  padding-top: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+.list__personal {
+  display: flex;
+}
+.personal__icred {
+  padding-right: 20px;
+}
 .title__text {
   font-family: Prompt, sans-serif;
   font-size: 40px;
@@ -203,6 +216,10 @@ body {
 }
 .inner__wrapper_sticker::-webkit-scrollbar {
   display: none;
+}
+
+.card-add {
+  font-size: 48px;
 }
 
 .sticker__card {

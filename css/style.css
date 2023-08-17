@@ -126,6 +126,7 @@ body {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   transition: 0.6s ease;
+  border-radius: 4px;
 }
 .task__calendar {
   cursor: pointer;
@@ -140,6 +141,7 @@ body {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   transition: 0.6s ease;
+  border-radius: 4px;
 }
 .task__stickywall {
   cursor: pointer;
@@ -155,6 +157,7 @@ body {
   color: rgba(0, 0, 0, 0.6);
   transition: 0.6s ease;
   -webkit-user-select: none;
+  border-radius: 4px;
 }
 
 .upcoming__icon {

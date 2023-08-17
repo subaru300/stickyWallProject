@@ -130,6 +130,7 @@ body {
     font-weight: 600;
     color: $sidebar-text-black;
     transition: 0.6s ease;
+    border-radius: 4px;
   }
 
   &__calendar {
@@ -145,6 +146,7 @@ body {
     font-weight: 600;
     color: $sidebar-text-black;
     transition: 0.6s ease;
+    border-radius: 4px;
   }
 
   &__stickywall {
@@ -161,6 +163,7 @@ body {
     color: $sidebar-text-black;
     transition: 0.6s ease;
     -webkit-user-select: none;
+    border-radius: 4px;
   }
 }
 .upcoming {
@@ -243,20 +246,6 @@ body {
   &__icon {
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // main content
 

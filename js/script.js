@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   stickerMain.addEventListener('click', function () {
     const sticker = document.createElement('div');
     sticker.classList.add('sticker__card');
+    sticker.setAttribute('contenteditable', 'true');
     grid.insertBefore(sticker, this);
   });
 });

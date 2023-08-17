@@ -203,7 +203,6 @@ body {
 .sticker__card {
   width: 240px;
   height: 240px;
-<<<<<<< HEAD
   background: #FDF3B5;
   display: flex;
   align-items: center;
@@ -225,7 +224,11 @@ body {
 
 .card-add {
   font-size: 48px;
-=======
+}
+
+.sticker__card {
+  width: 240px;
+  height: 240px;
   border-radius: 10px;
   background: #BFCCBA;
   align-items: center;
@@ -235,6 +238,9 @@ body {
   overflow: scroll;
   padding: 10px;
 }
+.sticker__card::-webkit-scrollbar {
+  display: none;
+}
 
 .card-add {
   font-size: 48px;
@@ -242,5 +248,4 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
->>>>>>> a6328601d9192312cfe364caf39a532a7eefe0ce
 }/*# sourceMappingURL=style.css.map */

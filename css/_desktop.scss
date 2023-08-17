@@ -32,6 +32,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 10px;
+    -webkit-user-select: none;
   }
 
   &__main {
@@ -103,55 +104,86 @@ body {
     display: flex;
     align-items: center;
     gap: 18px;
+    height: 28px;
     margin: 5px 0 0 0;
-    padding: 8px 4px 0 4px;
     cursor: pointer;
-
-    &:hover {
-      background: #EAEAEA;
-      border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
     }
+    
+    &__active {
+      background: #EAEAEA;
   }
 
   &__today {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
   }
 
   &__calendar {
     cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
   }
 
   &__stickywall {
     cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    margin: 5px 0 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
   }
 }
 .upcoming {
   &__icon {
-  }
-
-  &__text {
+    margin: 5px 0 4px 8px;
   }
 }
 .today {
   &__icon {
+    margin: 5px 0 4px 8px;
   }
 
-  &__text {
-  }
 }
 .calendar {
   &__icon {
+    margin: 5px 0 4px 8px;
   }
 
-  &__text {
-  }
 }
 .stickywall {
   &__icon {
+    margin: 5px 0 4px 8px;
   }
 
-  &__text {
-  }
 }
 
 // main content
@@ -229,102 +261,102 @@ body {
   //   box-sizing: border-box;
   // }
   
-  .task__upcoming:hover{
-    background: #EAEAEA;
-    border-radius: 4px;
-  }
+  // .task__upcoming:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
   
-  .upcoming__text{
-    opacity: 60%;
-    font-weight: 500;
-    padding-bottom: 3px;
-  }
+  // .upcoming__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  //   padding-bottom: 3px;
+  // }
   
-  .upcoming__icon{
-    padding-right: 15px;
-  }
+  // .upcoming__icon{
+  //   padding-right: 15px;
+  // }
   
-  /* Today */
+  // /* Today */
   
-  .task__today{
-    display: flex;
-    margin-top: 10px;
-    margin-left: 18px;
-    padding-left: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
+  // .task__today{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-left: 10px;
+  //   padding-top: 6px;
+  //   padding-bottom: 6px;
+  // }
   
-  .task__today:hover{
-    background: #EAEAEA;
-    border-radius: 4px;
-  }
+  // .task__today:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
   
-  .today__text{
-    opacity: 60%;
-    font-weight: 500;
-  }
+  // .today__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  // }
   
-  .today__icon{
-    padding-right: 18.5px;
-  }
+  // .today__icon{
+  //   padding-right: 18.5px;
+  // }
   
-  /* Calendar */
+  // /* Calendar */
   
-  .task__calendar{
-    display: flex;
-    margin-top: 10px;
-    margin-left: 18px;
-    padding-left: 10px;
-    padding-bottom: 6px;
-    padding-top: 6px;
-  }
+  // .task__calendar{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-left: 10px;
+  //   padding-bottom: 6px;
+  //   padding-top: 6px;
+  // }
   
-  .task__calendar:hover{
-    background: #EAEAEA;
-    border-radius: 4px;
-  }
+  // .task__calendar:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
   
-  .calendar__text{
-    opacity: 60%;
-    font-weight: 500;
-  }
+  // .calendar__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  // }
   
-  .calendar__icon{
-    padding-right: 15px;
-  }
+  // .calendar__icon{
+  //   padding-right: 15px;
+  // }
   
-  /* sticky */
+  // /* sticky */
   
-  .task__stickywall{
-    display: flex;
-    margin-top: 10px;
-    margin-left: 18px;
-    padding-left: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
+  // .task__stickywall{
+  //   display: flex;
+  //   margin-top: 10px;
+  //   margin-left: 18px;
+  //   padding-left: 10px;
+  //   padding-top: 6px;
+  //   padding-bottom: 6px;
+  // }
   
-  .task__stickywall:hover{
-    background: #EAEAEA;
-    border-radius: 4px;
-  }
+  // .task__stickywall:hover{
+  //   background: #EAEAEA;
+  //   border-radius: 4px;
+  // }
   
-  .stickywall__text{
-    opacity: 60%;
-    font-weight: 500;
-  }
+  // .stickywall__text{
+  //   opacity: 60%;
+  //   font-weight: 500;
+  // }
   
-  .stickywall__icon{
-    padding-right: 15px;
-  }
+  // .stickywall__icon{
+  //   padding-right: 15px;
+  // }
   
-  /* hr_two */
+  // /* hr_two */
   
-  .hr_two{
-    width: 260px;
-    height: 1.5px;
-    background-color: #EEEEEE;
-    margin-top: 10px;
-  }
+  // .hr_two{
+  //   width: 260px;
+  //   height: 1.5px;
+  //   background-color: #EEEEEE;
+  //   margin-top: 10px;
+  // }
 

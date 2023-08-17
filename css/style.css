@@ -43,6 +43,7 @@ body {
   border: none;
   border-radius: 14px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  overflow-x: auto;
 }
 
 .section__wrapper {
@@ -121,7 +122,6 @@ body {
   gap: 18px;
   height: 28px;
   margin: 5px 0 0 0;
-  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
@@ -130,13 +130,11 @@ body {
 }
 .task__calendar {
   cursor: pointer;
-  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 18px;
   height: 28px;
   margin: 5px 0 0 0;
-  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
@@ -176,33 +174,36 @@ body {
   margin: 5px 0 4px 8px;
 }
 
+.title__text {
+  font-family: Prompt, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
 .inner__wrapper_sticker {
+  margin-top: 35px;
+  border: 1.5px solid #EEEEEE;
+  border-radius: 10px;
+  padding: 18px;
   width: 800px;
   height: 540px;
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
-  overflow: scroll;
-}
-.inner__wrapper_sticker::-webkit-scrollbar {
-  display: none;
-}
-.inner__wrapper_sticker__wrapper_sticker {
-  width: 800px;
-  height: 540px;
-  display: grid;
+  align-items: center;
+  justify-content: center;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
   grid-template-rows: repeat(auto-fill, minmax(240px, 240px));
   overflow: scroll;
 }
-.inner__wrapper_sticker__wrapper_sticker::-webkit-scrollbar {
+.inner__wrapper_sticker::-webkit-scrollbar {
   display: none;
 }
 
 .sticker__card {
   width: 240px;
   height: 240px;
+<<<<<<< HEAD
   background: #FDF3B5;
   display: flex;
   align-items: center;
@@ -224,4 +225,22 @@ body {
 
 .card-add {
   font-size: 48px;
+=======
+  border-radius: 10px;
+  background: #BFCCBA;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.card-add {
+  font-size: 48px;
+  background: rgba(217, 217, 217, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> a6328601d9192312cfe364caf39a532a7eefe0ce
 }/*# sourceMappingURL=style.css.map */

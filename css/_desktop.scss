@@ -390,6 +390,7 @@ body {
       top: 25%;
       background-color: $sidebar-hover-gray;
       border-radius: 14px;
+      z-index: 10;
     }
 
     &_text {
@@ -541,4 +542,48 @@ body {
     &_title {
     }
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }

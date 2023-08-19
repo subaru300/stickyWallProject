@@ -14,6 +14,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const windowNewText = document.querySelector('.sticker__window_section');
     stickerNew.addEventListener('click', function () {
       windowNewText.classList.remove('hidden');
+      overlay.classList.remove('hidden');
     });
   });
 });
+
+
+const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', function () {
+  const windowNewText = document.querySelector('.sticker__window_section');
+  overlay.classList.add('hidden');
+  windowNewText.classList.add('hidden');
+})
+
+let stickyWindow = document.querySelector('.sticker__window_section');
+let windowCancelButton = document.querySelector('.window__btn_cancel');
+
+windowCancelButton.addEventListener('click', function () {
+  stickyWindow.style.display = 'none';
+  overlay.classList.add('hidden');
+})
+
+

@@ -268,7 +268,6 @@ body {
   &__wrapper {
     &_sticker {
       margin-top: 35px;
-
       border: 1.5px solid $sidebar-border-gray;
       border-radius: 10px;
       padding: 18px;
@@ -315,6 +314,10 @@ body {
   // .card-add {
   //   font-size: 48px;
   // }
+.card-add {
+  font-size: 48px;
+}
+
 
 .sticker {
   &__card {
@@ -341,3 +344,4 @@ body {
   align-items: center;
   justify-content: center;
 }
+

@@ -200,6 +200,10 @@ body {
   display: none;
 }
 
+.card-add {
+  font-size: 48px;
+}
+
 .sticker__card {
   width: 240px;
   height: 240px;

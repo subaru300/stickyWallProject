@@ -199,9 +199,15 @@ body {
   }
   // here title for list text
   &__title {
+    padding-top: 20px;
+    color: $sidebar-text-black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
   }
   // here personal is parent div
   &__personal {
+    display: flex;
   }
   // here work is parent div
   &__work {
@@ -215,8 +221,18 @@ body {
 }
 .personal {
   // here you have small red bg: red
-  &__red {
+
+  &__icred {
+    padding-right: 20px;
   }
+
+  // &__red {
+  //   width: 18px;
+  //   height: 18px;
+  //   background-color: red;
+  //   border-radius: 2.5px;
+
+  // }
   // here you have small rectangle with number 3 bg: gray;
   &__number {
   }

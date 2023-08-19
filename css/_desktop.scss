@@ -354,21 +354,21 @@ body {
       display: none;
     }
   }
-  &__card-plus {
-    width: 240px;
-    height: 240px;
-    border-radius: 10px;
-    background: $green-bg;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    outline: none;
-    overflow: scroll;
-    padding: 10px;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+  // &__card-plus {
+  //   width: 240px;
+  //   height: 240px;
+  //   border-radius: 10px;
+  //   background: $green-bg;
+  //   align-items: center;
+  //   justify-content: center;
+  //   cursor: pointer;
+  //   outline: none;
+  //   overflow: scroll;
+  //   padding: 10px;
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
 }
 
 .card-add {
@@ -386,8 +386,9 @@ body {
       width: 380px;
       height: 420px;
       position: absolute;
-      left: 47%;
-      top: 25%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       background-color: $sidebar-hover-gray;
       border-radius: 14px;
       z-index: 10;
@@ -430,6 +431,7 @@ body {
       border-radius: 6px;
       margin: 0 20px 12px 20px;
       padding: 6px 10px;
+      overflow: scroll;
     }
   }
 
@@ -543,39 +545,6 @@ body {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .overlay {
   position: absolute;

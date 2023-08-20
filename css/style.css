@@ -90,6 +90,11 @@ body {
   background: none;
   outline: none;
 }
+.search__text::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -178,8 +183,15 @@ body {
   margin: 5px 0 4px 8px;
 }
 
+.list__line {
+  width: 260px;
+  height: 1.5px;
+  background-color: #EEEEEE;
+  margin-top: 10px;
+}
 .list__title {
   padding-top: 20px;
+  padding-bottom: 5px;
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   font-size: 14px;
@@ -187,10 +199,108 @@ body {
 }
 .list__personal {
   display: flex;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
+  border-radius: 4px;
+  background: #eaeaea;
+  padding-left: 10px;
 }
-.personal__icred {
-  padding-right: 20px;
+.list__active {
+  background: #eaeaea;
 }
+.list__work {
+  display: flex;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
+  border-radius: 4px;
+  background: #eaeaea;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.list__active {
+  background: #eaeaea;
+}
+.list__list1 {
+  display: flex;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
+  border-radius: 4px;
+  background: #eaeaea;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.list__newlist {
+  display: flex;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.6s ease;
+  border-radius: 4px;
+  background: #eaeaea;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.personal__number {
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  background-color: #D9D9D9;
+  text-align: center;
+  border-radius: 2px;
+  margin-left: 95px;
+}
+
+.work__number {
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  background-color: #D9D9D9;
+  text-align: center;
+  border-radius: 2px;
+  margin-left: 122.5px;
+}
+
+.list1__number {
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  background-color: #D9D9D9;
+  text-align: center;
+  border-radius: 2px;
+  margin-left: 124.3px;
+}
+
 .title__text {
   font-family: Prompt, sans-serif;
   font-size: 40px;
@@ -360,6 +470,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   z-index: 5;
 }/*# sourceMappingURL=style.css.map */

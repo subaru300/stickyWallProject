@@ -200,10 +200,15 @@ body {
 .list {
   // here line between task and list
   &__line {
+    width: 260px;
+    height: 1.5px;
+    background-color: #EEEEEE;
+    margin-top: 10px;
   }
   // here title for list text
   &__title {
     padding-top: 20px;
+    padding-bottom: 5px;
     color: $sidebar-text-black;
     text-transform: uppercase;
     font-size: 14px;
@@ -211,25 +216,88 @@ body {
   }
   // here personal is parent div
   &__personal {
-    display: flex;
+   display: flex;
+   color: red;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   gap: 18px;
+   height: 28px;
+   font-size: 16px;
+   font-weight: 600;
+   color: $sidebar-text-black;
+   transition: 0.6s ease;
+   border-radius: 4px;
+   background: #eaeaea;
+   padding-left: 10px;
   }
+
+  &__active{
+    background: #eaeaea;
+  }
+
   // here work is parent div
   &__work {
+    display: flex;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    background: #eaeaea;
+    padding-left: 10px; 
+    margin-top: 5px;
+  }
+
+  &__active{
+    background: #eaeaea;
   }
   // here list1 is parent div
   &__list1 {
+    display: flex;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    background: #eaeaea;
+    padding-left: 10px; 
+    margin-top: 5px;
+
   }
   // here newlist is parent div
   &__newlist {
+    display: flex;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    background: #eaeaea;
+    padding-left: 10px; 
+    margin-top: 5px;
   }
 }
 .personal {
   // here you have small red bg: red
-
-  &__icred {
-    padding-right: 20px;
-  }
-
   // &__red {
   //   width: 18px;
   //   height: 18px;
@@ -239,6 +307,13 @@ body {
   // }
   // here you have small rectangle with number 3 bg: gray;
   &__number {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    background-color: #D9D9D9;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 95px;
   }
 }
 .work {
@@ -247,6 +322,13 @@ body {
   }
   // here you have small rectangle with number 3 bg: gray;
   &__number {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    background-color: #D9D9D9;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 122.5px;
   }
 }
 .list1 {
@@ -255,11 +337,19 @@ body {
   }
   // here you have small rectangle with number 3 bg: gray;
   &__number {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    background-color: #D9D9D9;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 124.3px;
   }
 }
 .newlist {
   // here you have icon for add new list
   &__icon {
+    // padding-right: 15px;
   }
 }
 

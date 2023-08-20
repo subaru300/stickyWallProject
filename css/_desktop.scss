@@ -154,7 +154,6 @@ body {
 
   &__stickywall {
     cursor: pointer;
-    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 18px;
@@ -217,7 +216,6 @@ body {
   // here personal is parent div
   &__personal {
    display: flex;
-   color: red;
    cursor: pointer;
    display: flex;
    align-items: center;
@@ -239,7 +237,6 @@ body {
   // here work is parent div
   &__work {
     display: flex;
-    color: red;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -261,7 +258,6 @@ body {
   // here list1 is parent div
   &__list1 {
     display: flex;
-    color: red;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -280,7 +276,6 @@ body {
   // here newlist is parent div
   &__newlist {
     display: flex;
-    color: red;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -363,20 +358,70 @@ body {
 .tag {
 
   &__line {
+    width: 260px;
+    height: 1.5px;
+    background-color: #EEEEEE;
+    margin-top: 10px;
   }
 
   &__items {
+    display: flex; 
   }
 
   &__block {
 
-    &_item {
+    &_item1 {
+      width: 48px;
+      height: 22px;
+      background-color: #8BEAFF;
+      opacity: 60%;
+      border-radius: 2px;
+      text-align: center;
+      font-size: 12px;
+      align-items: center;
+      padding-top: 4px;
+      font-weight: 500;
+
+    }
+
+    &_item2{
+      width: 48px;
+      height: 22px;
+      background-color: #FEB6B6;
+      opacity: 60%;
+      border-radius: 2px;
+      text-align: center;
+      font-size: 12px;
+      align-items: center;
+      padding-top: 4px;
+      margin-left: 6px;
+      font-weight: 500;
+    }
+
+    &_item3{
+      width: 68px;
+      height: 22px;
+      background-color: #D9D9D9;
+      opacity: 60%;
+      border-radius: 2px;
+      text-align: center;
+      font-size: 12px;
+      align-items: center;
+      padding-top: 4px;
+      margin-left: 6px;
+      font-weight: 500;
     }
   }
 }
 .tags {
 
   &__title {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    color: $sidebar-text-black;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 
@@ -390,9 +435,33 @@ body {
 .footer {
 
   &__settings {
+    display: flex;
+    height: 28px;
+    margin-top: 48px;
+    cursor: pointer;
+    align-items: center;
+    gap: 18px;
+    font-size: 16px;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    padding-left: 10px;
+    background: #eaeaea;
   }
 
   &__signout {
+    display: flex;
+    height: 28px;
+    margin-top: 10px;
+    cursor: pointer;
+    align-items: center;
+    gap: 18px;
+    font-size: 16px;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    padding-left: 10px;
+    background: #eaeaea;
   }
 }
 .settings {
@@ -401,6 +470,7 @@ body {
   }
 
   &__text {
+    font-weight: 500;
   }
 }
 .signout {
@@ -409,6 +479,7 @@ body {
   }
 
   &__text {
+    font-weight: 500;
   }
 }
 

@@ -263,6 +263,66 @@ body {
   }
 }
 
+// tags section 
+
+.main {
+
+  &__tag {
+  }
+}
+.tag {
+
+  &__line {
+  }
+
+  &__items {
+  }
+
+  &__block {
+
+    &_item {
+    }
+  }
+}
+.tags {
+
+  &__title {
+  }
+}
+
+// sidebar footer 
+
+.sidebar {
+
+  &__footer {
+  }
+}
+.footer {
+
+  &__settings {
+  }
+
+  &__signout {
+  }
+}
+.settings {
+
+  &__icon {
+  }
+
+  &__text {
+  }
+}
+.signout {
+
+  &__icon {
+  }
+
+  &__text {
+  }
+}
+
+
 // main content
 
 .wrapper {

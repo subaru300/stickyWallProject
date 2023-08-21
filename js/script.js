@@ -1,77 +1,83 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+  // variables
   const grid = document.querySelector('.inner__wrapper_sticker');
-  const stickerMain = document.querySelector('.sticker__card.card-add');
-  const addButton = document.querySelector('.window__btn_add');
+  const stickerPlus = document.querySelector('.sticker__card.card-add');
+  const windowAddButton = document.querySelector('.window__btn_add');
+  const windowCancelButton = document.querySelector('.window__btn_cancel');
+  const windowTextTitle = document.querySelector('.window__text_title');
+  const windowTextDescription = document.querySelector(
+    '.window__text_description'
+  );
+  const overlay = document.querySelector('.overlay');
+  const windowNewText = document.querySelector('.sticker__window_section');
+  const createNewstickerWindow = document.querySelector(
+    '.sticker__window_section'
+  );
 
-  let counter = 0;
+  // sticker ID counter
+  let counterOfStickers = 0;
 
-  stickerMain.addEventListener('click', function () {
+  // creating sticker function
+  const createNewSticker = function () {
     const sticker = document.createElement('div');
     sticker.classList.add('sticker__card');
-    sticker.id = `sticker${counter}`;
+    sticker.id = `sticker${counterOfStickers}`;
     sticker.setAttribute('contenteditable', 'true');
     grid.insertBefore(sticker, this);
+    windowTextTitle.setAttribute('contenteditable', 'true');
+    windowTextDescription.setAttribute('contenteditable', 'true');
+    windowNewText.classList.remove('hidden');
+    overlay.classList.remove('hidden');
 
-    ///// adding text in sticker
-
-    addButton.addEventListener('click', function () {
-      let stickerTextId = document.getElementById(`sticker${counter}`);
+    // on progress!!!!! errors
+    windowAddButton.addEventListener('click', function () {
+      let stickerTextId = document.getElementById(
+        `sticker${counterOfStickers}`
+      );
       stickerTextId.textContent = windowTextTitle.textContent;
       stickerTextId.textContent = windowTextDescription.textContent;
     });
-    counter++;
+    counterOfStickers++;
+  };
+
+  // overlay closing function
+  const closeWindowOnTapOverlay = function () {
+    const windowNewText = document.querySelector('.sticker__window_section');
+    overlay.classList.add('hidden');
+    windowNewText.classList.add('hidden');
+  };
+
+  // close button function on creation window
+  const closeWindowCreationNewSticker = function () {
+    createNewstickerWindow.classList.add('hidden');
+    windowNewText.classList.add('hidden');
+    overlay.classList.add('hidden');
+  };
+
+  // clean text on input window function
+  const removeTextOnNewWindow = function (e) {
+    windowTextTitle.textContent
+      ? (windowTextDescription.textContent = 'Write your text')
+      : (windowTextTitle.textContent = 'Write your title');
+    e.textContent = '';
+  };
+
+  // creating sticker event
+  stickerPlus.addEventListener('click', createNewSticker);
+  // overlay closing event
+  overlay.addEventListener('click', closeWindowOnTapOverlay);
+  // close button event
+  windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
+  // removing text on inputs creation window events
+  windowTextTitle.addEventListener('click', function () {
+    removeTextOnNewWindow(windowTextTitle);
   });
-});
+  windowTextDescription.addEventListener('click', function () {
+    removeTextOnNewWindow(windowTextDescription);
+  });
 
-const windowTextTitle = document.querySelector('.window__text_title');
-const windowTextDescription = document.querySelector(
-  '.window__text_description'
-);
-const stickerNew = document.querySelector('.card-add');
-const windowNewText = document.querySelector('.sticker__window_section');
-
-stickerNew.addEventListener('click', function () {
-  windowTextTitle.setAttribute('contenteditable', 'true');
-  windowTextDescription.setAttribute('contenteditable', 'true');
-  windowNewText.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-});
-
-const overlay = document.querySelector('.overlay');
-overlay.addEventListener('click', function () {
-  const windowNewText = document.querySelector('.sticker__window_section');
-  overlay.classList.add('hidden');
-  windowNewText.classList.add('hidden');
-});
-
-const stickyWindow = document.querySelector('.sticker__window_section');
-const windowCancelButton = document.querySelector('.window__btn_cancel');
-
-windowCancelButton.addEventListener('click', function () {
-  stickyWindow.classList.add('hidden');
-  windowNewText.classList.add('hidden');
-  overlay.classList.add('hidden');
-});
-
-///// clean text on input window
-const removeText = function (e) {
-  windowTextTitle.textContent
-    ? (windowTextDescription.textContent = 'Write your text')
-    : (windowTextTitle.textContent = 'Write your title');
-
-  e.textContent = '';
-};
-windowTextTitle.addEventListener('click', function () {
-  removeText(windowTextTitle);
-});
-windowTextDescription.addEventListener('click', function () {
-  removeText(windowTextDescription);
-});
-
-///// adding text in sticker
-
-addButton.addEventListener('click', function () {
-  windowTextTitle.textContent = windowTextTitle.value;
+  // adding text in sticker
+  windowAddButton.addEventListener('click', function () {});
 });

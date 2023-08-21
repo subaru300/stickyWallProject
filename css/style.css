@@ -49,6 +49,9 @@ body {
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
   overflow-x: auto;
 }
+.app__section::-webkit-scrollbar {
+  display: none;
+}
 
 .section__wrapper {
   margin: 20px;

@@ -1,5 +1,6 @@
 'use strict';
 
+// Очікування завантаження контенту сторінки
 document.addEventListener('DOMContentLoaded', function () {
   // variables
   const grid = document.querySelector('.inner__wrapper_sticker');

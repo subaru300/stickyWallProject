@@ -53,6 +53,7 @@ body {
   &__main {
   }
 }
+
 .header {
   &__text {
   }
@@ -92,10 +93,7 @@ body {
     }
   }
 }
-.main {
-  &__task {
-  }
-}
+
 .task {
   &__title {
     padding-top: 20px;
@@ -292,15 +290,7 @@ body {
   }
 }
 .personal {
-  // here you have small red bg: red
-  // &__red {
-  //   width: 18px;
-  //   height: 18px;
-  //   background-color: red;
-  //   border-radius: 2.5px;
 
-  // }
-  // here you have small rectangle with number 3 bg: gray;
   &__number {
     width: 14px;
     height: 14px;
@@ -312,10 +302,7 @@ body {
   }
 }
 .work {
-  // here you have small blue bg: blue
-  &__blue {
-  }
-  // here you have small rectangle with number 3 bg: gray;
+  
   &__number {
     width: 14px;
     height: 14px;
@@ -327,10 +314,7 @@ body {
   }
 }
 .list1 {
-  // here you have small yello bg: yello
-  &__yellow {
-  }
-  // here you have small rectangle with number 3 bg: gray;
+  
   &__number {
     width: 14px;
     height: 14px;
@@ -339,12 +323,6 @@ body {
     text-align: center;
     border-radius: 2px;
     margin-left: 124.3px;
-  }
-}
-.newlist {
-  // here you have icon for add new list
-  &__icon {
-    // padding-right: 15px;
   }
 }
 
@@ -371,45 +349,30 @@ body {
   &__block {
 
     &_item1 {
-      width: 48px;
-      height: 22px;
       background-color: #8BEAFF;
-      opacity: 60%;
-      border-radius: 2px;
-      text-align: center;
-      font-size: 12px;
-      align-items: center;
-      padding-top: 4px;
-      font-weight: 500;
-
+      padding: 4px 8px;
     }
 
     &_item2{
-      width: 48px;
-      height: 22px;
       background-color: #FEB6B6;
-      opacity: 60%;
-      border-radius: 2px;
-      text-align: center;
-      font-size: 12px;
-      align-items: center;
-      padding-top: 4px;
       margin-left: 6px;
-      font-weight: 500;
+      padding: 4px 8px;
     }
 
     &_item3{
-      width: 68px;
-      height: 22px;
       background-color: #D9D9D9;
+      padding: 4px 8px;
+      margin-left: 6px;
+    }
+
+    &_inner {
+      height: 22px;
       opacity: 60%;
       border-radius: 2px;
       text-align: center;
       font-size: 12px;
       align-items: center;
-      padding-top: 4px;
-      margin-left: 6px;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 }
@@ -452,7 +415,7 @@ body {
   &__signout {
     display: flex;
     height: 28px;
-    margin-top: 10px;
+    margin-top: 5px;
     cursor: pointer;
     align-items: center;
     gap: 18px;
@@ -466,20 +429,14 @@ body {
 }
 .settings {
 
-  &__icon {
-  }
-
   &__text {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 .signout {
 
-  &__icon {
-  }
-
   &__text {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -528,33 +485,6 @@ body {
   }
 }
 
-// .sticker {
-//   &__card {
-//     width: 240px;
-//     height: 240px;
-//     background: $yellow-sticker;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
-// .card-add {
-//   font-size: 48px;
-// }
-
-// .sticker {
-//   &__card {
-//     width: 240px;
-//     height: 240px;
-//     background: $yellow-sticker;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
-// .card-add {
-//   font-size: 48px;
-// }
 .card-add {
   font-size: 48px;
 }
@@ -603,7 +533,6 @@ body {
 .sticker {
   &__window {
     &_section {
-      // display: none;
       width: 380px;
       height: 420px;
       position: absolute;
@@ -643,6 +572,8 @@ body {
       border-radius: 6px;
       margin: 20px 20px 12px 20px;
       padding: 6px 10px;
+      color: $calendar-gray;
+      outline: none;
     }
 
     &_description {
@@ -653,6 +584,11 @@ body {
       margin: 0 20px 12px 20px;
       padding: 6px 10px;
       overflow: scroll;
+      color: $calendar-gray;
+      outline: none;
+      &::-webkit-scrollbar {
+            display: none;
+        }
     }
   }
 
@@ -661,24 +597,18 @@ body {
       width: 80px;
       height: 28px;
       border-radius: 4px;
-      // background-color: #a1a1a166;
-      // color: #434343e5;
-      // opacity: 0.9;
-      background-color: #000;
-      color: #fff;
-      opacity: 0.8;
+      background-color: $window-btn-gray;
+      color: $window-text-gray;
+      font-weight: 600;
     }
 
     &_cancel {
       width: 80px;
       height: 28px;
       border-radius: 4px;
-      // background-color: #a1a1a166;
-      // color: #434343e5;
-      // opacity: 0.9;
-      background-color: #000;
-      color: #fff;
-      opacity: 0.8;
+      background-color: $window-btn-gray;
+      color: $window-text-gray;
+      font-weight: 600;
     }
   }
 
@@ -693,76 +623,78 @@ body {
 .option {
   &__category {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100px;
     height: 24px;
+    padding: 4px;
     background-color: #fbfbfb;
     border-radius: 2px;
+
     &_rec {
+      width: 16px;
+      height: 16px;
+      border: none;
+      border-radius: 2px;
+      background: $sidebar-rec-yellow;
     }
 
     &_text {
       display: flex;
-      font-size: 14px;
       gap: 10px;
     }
-
-    &_icon {
-      width: 16px;
-      height: 16px;
-    }
-  }
+}
 
   &__calendar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100px;
     height: 24px;
     background-color: #fbfbfb;
+    padding: 4px;
     border-radius: 2px;
-    &_text {
-      display: flex;
-      font-size: 14px;
-    }
-
-    &_icon {
-    }
   }
 
   &__date {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100px;
+    padding: 4px;
     height: 24px;
     background-color: #fbfbfb;
     border-radius: 2px;
-    &_text {
-      display: flex;
-      font-size: 14px;
-    }
-
-    &_icon {
-    }
   }
 }
 .category {
   &__text {
+
     &_title {
+      font-size: 14px;
+      font-weight: 400;
+      color: $sidebar-rec-yellow;
+      margin-left: 8px;
     }
   }
 }
 .calendar {
   &__text {
+
     &_title {
+      font-size: 14px;
+      font-weight: 400;
+      color: $calendar-gray;
     }
   }
 }
 .date {
   &__text {
+
     &_title {
+      font-size: 14px;
+      font-weight: 400;
+      color: $calendar-gray;
     }
   }
 }

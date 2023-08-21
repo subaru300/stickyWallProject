@@ -90,11 +90,6 @@ body {
   background: none;
   outline: none;
 }
-.search__text::-moz-placeholder {
-  font-size: 16px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
-}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -306,42 +301,27 @@ body {
   display: flex;
 }
 .tag__block_item1 {
-  width: 48px;
-  height: 22px;
   background-color: #8BEAFF;
-  opacity: 60%;
-  border-radius: 2px;
-  text-align: center;
-  font-size: 12px;
-  align-items: center;
-  padding-top: 4px;
-  font-weight: 500;
+  padding: 4px 8px;
 }
 .tag__block_item2 {
-  width: 48px;
-  height: 22px;
   background-color: #FEB6B6;
-  opacity: 60%;
-  border-radius: 2px;
-  text-align: center;
-  font-size: 12px;
-  align-items: center;
-  padding-top: 4px;
   margin-left: 6px;
-  font-weight: 500;
+  padding: 4px 8px;
 }
 .tag__block_item3 {
-  width: 68px;
-  height: 22px;
   background-color: #D9D9D9;
+  padding: 4px 8px;
+  margin-left: 6px;
+}
+.tag__block_inner {
+  height: 22px;
   opacity: 60%;
   border-radius: 2px;
   text-align: center;
   font-size: 12px;
   align-items: center;
-  padding-top: 4px;
-  margin-left: 6px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .tags__title {
@@ -370,7 +350,7 @@ body {
 .footer__signout {
   display: flex;
   height: 28px;
-  margin-top: 10px;
+  margin-top: 5px;
   cursor: pointer;
   align-items: center;
   gap: 18px;
@@ -383,11 +363,11 @@ body {
 }
 
 .settings__text {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .signout__text {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .title__text {
@@ -476,6 +456,8 @@ body {
   border-radius: 6px;
   margin: 20px 20px 12px 20px;
   padding: 6px 10px;
+  color: #a1a1a1;
+  outline: none;
 }
 .window__text_description {
   width: 340px;
@@ -485,22 +467,27 @@ body {
   margin: 0 20px 12px 20px;
   padding: 6px 10px;
   overflow: scroll;
+  color: #a1a1a1;
+  outline: none;
+}
+.window__text_description::-webkit-scrollbar {
+  display: none;
 }
 .window__btn_add {
   width: 80px;
   height: 28px;
   border-radius: 4px;
-  background-color: #000;
-  color: #fff;
-  opacity: 0.8;
+  background-color: rgba(161, 161, 161, 0.4);
+  color: rgba(67, 67, 67, 0.9);
+  font-weight: 600;
 }
 .window__btn_cancel {
   width: 80px;
   height: 28px;
   border-radius: 4px;
-  background-color: #000;
-  color: #fff;
-  opacity: 0.8;
+  background-color: rgba(161, 161, 161, 0.4);
+  color: rgba(67, 67, 67, 0.9);
+  font-weight: 600;
 }
 .window__buttons_btn {
   display: flex;
@@ -510,48 +497,65 @@ body {
 
 .option__category {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100px;
   height: 24px;
+  padding: 4px;
   background-color: #fbfbfb;
   border-radius: 2px;
+}
+.option__category_rec {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 2px;
+  background: rgba(255, 184, 53, 0.6);
 }
 .option__category_text {
   display: flex;
-  font-size: 14px;
   gap: 10px;
-}
-.option__category_icon {
-  width: 16px;
-  height: 16px;
 }
 .option__calendar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100px;
   height: 24px;
   background-color: #fbfbfb;
+  padding: 4px;
   border-radius: 2px;
-}
-.option__calendar_text {
-  display: flex;
-  font-size: 14px;
 }
 .option__date {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100px;
+  padding: 4px;
   height: 24px;
   background-color: #fbfbfb;
   border-radius: 2px;
 }
-.option__date_text {
-  display: flex;
+
+.category__text_title {
   font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 184, 53, 0.6);
+  margin-left: 8px;
 }
+
+.calendar__text_title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+
+.date__text_title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -559,7 +563,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   z-index: 5;
 }/*# sourceMappingURL=style.css.map */

@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // clean text on input window function
   const removeTextOnNewWindow = function (e) {
     windowTextTitle.textContent
-      ? (windowTextDescription.textContent = 'Write your text')
-      : (windowTextTitle.textContent = 'Write your title');
+      ? (windowTextDescription.textContent = 'Sticker description')
+      : (windowTextTitle.textContent = 'Sticker title');
     e.textContent = '';
   };
 

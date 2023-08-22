@@ -37,12 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // add button click
     windowAddButton.addEventListener('click', function () {
-      //
-
-      //
       const currentSticker = document.getElementById(stickerCounter);
 
-      //
       const userInput = windowTextDescription.innerText;
       const items = userInput.split('\n');
       console.log(items);
@@ -55,23 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // currentSticker.innerHTML = windowTextTitle.textContent + '<br>' + '<br>';
-
-      // currentSticker.appendChild(ul);
-
       const inputHeaderText = document.createElement('p');
       inputHeaderText.textContent = windowTextTitle.textContent;
       inputHeaderText.classList.add('header-bold');
       currentSticker.innerHTML = '';
       currentSticker.appendChild(inputHeaderText);
       currentSticker.appendChild(ul);
-      //
-
-      // currentSticker.innerHTML =
-      //   windowTextTitle.textContent +
-      //   '<br>' +
-      //   '<br>' +
-      //   windowTextDescription.textContent;
 
       stickerCounter++;
       closeWindowCreationNewSticker();
@@ -80,8 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // overlay closing function
   const closeWindowOnTapOverlay = function () {
-    //del
-    // const windowNewText = document.querySelector('.sticker__window_section');
     overlay.classList.add('hidden');
     windowNewText.classList.add('hidden');
   };

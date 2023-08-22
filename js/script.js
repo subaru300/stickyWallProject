@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     windowNewText.classList.remove('hidden');
     overlay.classList.remove('hidden');
 
-    // add button click
+    // add button click function
     windowAddButton.addEventListener('click', function () {
       const currentSticker = document.getElementById(stickerCounter);
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const inputHeaderText = document.createElement('p');
       inputHeaderText.textContent = windowTextTitle.textContent;
       inputHeaderText.classList.add('header-bold');
-      currentSticker.innerHTML = '';
+      // currentSticker.innerHTML = '';
       currentSticker.appendChild(inputHeaderText);
       currentSticker.appendChild(ul);
 
@@ -117,6 +117,4 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', closeWindowOnTapOverlay);
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
-  // adding text in sticker
-  windowAddButton.addEventListener('click', function () {});
 });

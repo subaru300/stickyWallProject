@@ -28,10 +28,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const sticker = document.createElement('div');
     sticker.classList.add('sticker__card');
     sticker.id = stickerCounter;
+    sticker.addEventListener('mouseover', function () {
+      stickerMenu.style.opacity = '1'
+    })
+    sticker.addEventListener('mouseout', function () {
+      stickerMenu.style.opacity = '0'
+    })
     sticker.setAttribute('contenteditable', 'true');
-    // const stickerMenu = document.createElement('div');
-    // stickerMenu.classList.add('sticker__card_menu');
-    // sticker.appendChild(stickerMenu);
+
+    const stickerMenu = document.createElement('div');
+    stickerMenu.classList.add('sticker__card_menu');
+    const menuItem1 = document.createElement('img');
+    menuItem1.src = 'images/edit-icon.svg';
+    const menuItem2 = document.createElement('img');
+    menuItem2.src = 'images/sticker-icon.svg';
+    const menuItem3 = document.createElement('img');
+    menuItem3.src = 'images/trash-icon.svg';
+    stickerMenu.appendChild(menuItem1);
+    stickerMenu.appendChild(menuItem2);
+    stickerMenu.appendChild(menuItem3);
+    sticker.appendChild(stickerMenu);
+
     grid.insertBefore(sticker, this);
     windowTextTitle.setAttribute('contenteditable', 'true');
     windowTextDescription.setAttribute('contenteditable', 'true');
@@ -57,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const inputHeaderText = document.createElement('p');
       inputHeaderText.textContent = windowTextTitle.textContent;
       inputHeaderText.classList.add('header-bold');
-      currentSticker.innerHTML = '';
+      // currentSticker.innerHTML = '';
       currentSticker.appendChild(inputHeaderText);
       currentSticker.appendChild(ul);
 
@@ -109,3 +126,5 @@ document.addEventListener('DOMContentLoaded', function () {
   // adding text in sticker
   windowAddButton.addEventListener('click', function () {});
 });
+
+

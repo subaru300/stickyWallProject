@@ -20,7 +20,7 @@ a {
 ul,
 ol,
 li {
-  list-style: none;
+  list-style: inside;
 }
 
 @font-face {
@@ -422,6 +422,11 @@ body {
 }
 .sticker__card::-webkit-scrollbar {
   display: none;
+}
+
+.header-bold {
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .card-add {

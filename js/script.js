@@ -34,14 +34,44 @@ document.addEventListener('DOMContentLoaded', function () {
     windowTextDescription.setAttribute('contenteditable', 'true');
     windowNewText.classList.remove('hidden');
     overlay.classList.remove('hidden');
+
+    // add button click
     windowAddButton.addEventListener('click', function () {
+      //
+
+      //
       const currentSticker = document.getElementById(stickerCounter);
 
-      currentSticker.innerHTML =
-        windowTextTitle.textContent +
-        '<br>' +
-        '<br>' +
-        windowTextDescription.textContent;
+      //
+      const userInput = windowTextDescription.innerText;
+      const items = userInput.split('\n');
+      console.log(items);
+      const ul = document.createElement('ul');
+      items.forEach(item => {
+        if (item.trim() !== '') {
+          const li = document.createElement('li');
+          li.textContent = item;
+          ul.appendChild(li);
+        }
+      });
+
+      // currentSticker.innerHTML = windowTextTitle.textContent + '<br>' + '<br>';
+
+      // currentSticker.appendChild(ul);
+
+      const inputHeaderText = document.createElement('p');
+      inputHeaderText.textContent = windowTextTitle.textContent;
+      inputHeaderText.classList.add('header-bold');
+      currentSticker.innerHTML = '';
+      currentSticker.appendChild(inputHeaderText);
+      currentSticker.appendChild(ul);
+      //
+
+      // currentSticker.innerHTML =
+      //   windowTextTitle.textContent +
+      //   '<br>' +
+      //   '<br>' +
+      //   windowTextDescription.textContent;
 
       stickerCounter++;
       closeWindowCreationNewSticker();

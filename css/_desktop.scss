@@ -509,7 +509,8 @@ body {
       justify-content: space-between;
       flex-direction: column;
       opacity: 0;
-      transition: .7s
+      transition: .7s;
+      transition-delay: 1s;
     }
 
     &::-webkit-scrollbar {

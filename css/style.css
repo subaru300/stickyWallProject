@@ -432,6 +432,7 @@ body {
   flex-direction: column;
   opacity: 0;
   transition: 0.7s;
+  transition-delay: 1s;
 }
 .sticker__card::-webkit-scrollbar {
   display: none;

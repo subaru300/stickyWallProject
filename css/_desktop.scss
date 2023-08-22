@@ -499,7 +499,7 @@ body {
       height: 92px;
       background: $sticker-menu-white;
       border: none;
-      border-radius: 0 4px 0 0;
+      border-radius: 0 4px 0 4px;
       position: absolute;
       top: 0px;
       right: 0px;
@@ -509,6 +509,7 @@ body {
       justify-content: space-between;
       flex-direction: column;
       opacity: 0;
+      transition: .7s
     }
 
     &::-webkit-scrollbar {

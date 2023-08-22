@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const sticker = document.createElement('div');
     sticker.classList.add('sticker__card');
     sticker.id = stickerCounter;
+    sticker.addEventListener('mouseover', function () {
+      stickerMenu.style.opacity = '1'
+    })
+    sticker.addEventListener('mouseout', function () {
+      stickerMenu.style.opacity = '0'
+    })
     sticker.setAttribute('contenteditable', 'true');
 
     const stickerMenu = document.createElement('div');
@@ -118,3 +124,5 @@ document.addEventListener('DOMContentLoaded', function () {
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
 });
+
+

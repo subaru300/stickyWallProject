@@ -406,7 +406,7 @@ body {
 .sticker__card {
   width: 240px;
   height: 240px;
-  border-radius: 3px;
+  border-radius: 6px;
   background: #BFCCBA;
   align-items: center;
   justify-content: center;
@@ -417,19 +417,20 @@ body {
   position: relative;
 }
 .sticker__card_menu {
-  width: 26px;
-  height: 74px;
-  background: #e7e7e7;
+  width: 32px;
+  height: 92px;
+  background: #d9d9d9;
   border: none;
-  border-radius: 4px;
+  border-radius: 0 4px 0 0;
   position: absolute;
-  top: -11px;
-  right: -13px;
-  padding: 3px;
+  top: 0px;
+  right: 0px;
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  opacity: 0;
 }
 .sticker__card::-webkit-scrollbar {
   display: none;

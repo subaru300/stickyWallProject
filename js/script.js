@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
     windowNewText.classList.add('hidden');
     overlay.classList.add('hidden');
   };
-
   // clean text on input window function
   windowTextTitle.addEventListener('focus', () => {
     if (windowTextTitle.textContent === windowTextTitleDefault) {

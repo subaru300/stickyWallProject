@@ -21,8 +21,8 @@ body {
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
     overflow-x: auto;
     &::-webkit-scrollbar {
-        display: none;
-      }
+      display: none;
+    }
   }
 }
 .section {
@@ -202,7 +202,7 @@ body {
   &__line {
     width: 260px;
     height: 1.5px;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
     margin-top: 10px;
   }
   // here title for list text
@@ -216,22 +216,22 @@ body {
   }
   // here personal is parent div
   &__personal {
-   display: flex;
-   cursor: pointer;
-   display: flex;
-   align-items: center;
-   gap: 18px;
-   height: 28px;
-   font-size: 16px;
-   font-weight: 600;
-   color: $sidebar-text-black;
-   transition: 0.6s ease;
-   border-radius: 4px;
-   background: #eaeaea;
-   padding-left: 10px;
+    display: flex;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $sidebar-text-black;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    background: #eaeaea;
+    padding-left: 10px;
   }
 
-  &__active{
+  &__active {
     background: #eaeaea;
   }
 
@@ -249,11 +249,11 @@ body {
     transition: 0.6s ease;
     border-radius: 4px;
     background: #eaeaea;
-    padding-left: 10px; 
+    padding-left: 10px;
     margin-top: 5px;
   }
 
-  &__active{
+  &__active {
     background: #eaeaea;
   }
   // here list1 is parent div
@@ -270,9 +270,8 @@ body {
     transition: 0.6s ease;
     border-radius: 4px;
     background: #eaeaea;
-    padding-left: 10px; 
+    padding-left: 10px;
     margin-top: 5px;
-
   }
   // here newlist is parent div
   &__newlist {
@@ -288,82 +287,76 @@ body {
     transition: 0.6s ease;
     border-radius: 4px;
     background: #eaeaea;
-    padding-left: 10px; 
+    padding-left: 10px;
     margin-top: 5px;
   }
 }
 .personal {
-
   &__number {
     width: 14px;
     height: 14px;
     font-size: 12px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     text-align: center;
     border-radius: 2px;
     margin-left: 95px;
   }
 }
 .work {
-  
   &__number {
     width: 14px;
     height: 14px;
     font-size: 12px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     text-align: center;
     border-radius: 2px;
     margin-left: 122.5px;
   }
 }
 .list1 {
-  
   &__number {
     width: 14px;
     height: 14px;
     font-size: 12px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     text-align: center;
     border-radius: 2px;
     margin-left: 124.3px;
   }
 }
 
-// tags section 
+// tags section
 
 .main {
-
   &__tag {
   }
 }
 .tag {
-
   &__line {
     width: 260px;
     height: 1.5px;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
     margin-top: 10px;
   }
 
   &__items {
-    display: flex; 
+    display: flex;
   }
 
   &__block {
-
     &_item1 {
-      background-color: #8BEAFF;
+      background-color: #8beaff;
       padding: 4px 8px;
     }
 
-    &_item2{
-      background-color: #FEB6B6;
+    &_item2 {
+      background-color: #feb6b6;
       margin-left: 6px;
       padding: 4px 8px;
     }
 
-    &_item3{
-      background-color: #D9D9D9;
+    &_item3 {
+      background-color: #d9d9d9;
       padding: 4px 8px;
       margin-left: 6px;
     }
@@ -380,7 +373,6 @@ body {
   }
 }
 .tags {
-
   &__title {
     padding-top: 20px;
     padding-bottom: 5px;
@@ -391,15 +383,13 @@ body {
   }
 }
 
-// sidebar footer 
+// sidebar footer
 
 .sidebar {
-
   &__footer {
   }
 }
 .footer {
-
   &__settings {
     display: flex;
     height: 28px;
@@ -431,18 +421,15 @@ body {
   }
 }
 .settings {
-
   &__text {
     font-weight: 600;
   }
 }
 .signout {
-
   &__text {
     font-weight: 600;
   }
 }
-
 
 // main content
 
@@ -590,8 +577,8 @@ body {
       color: $calendar-gray;
       outline: none;
       &::-webkit-scrollbar {
-            display: none;
-        }
+        display: none;
+      }
     }
   }
 
@@ -603,6 +590,7 @@ body {
       background-color: $window-btn-gray;
       color: $window-text-gray;
       font-weight: 600;
+      cursor: pointer;
     }
 
     &_cancel {
@@ -612,6 +600,7 @@ body {
       background-color: $window-btn-gray;
       color: $window-text-gray;
       font-weight: 600;
+      cursor: pointer;
     }
   }
 
@@ -646,7 +635,7 @@ body {
       display: flex;
       gap: 10px;
     }
-}
+  }
 
   &__calendar {
     display: flex;
@@ -672,7 +661,6 @@ body {
 }
 .category {
   &__text {
-
     &_title {
       font-size: 14px;
       font-weight: 400;
@@ -683,7 +671,6 @@ body {
 }
 .calendar {
   &__text {
-
     &_title {
       font-size: 14px;
       font-weight: 400;
@@ -693,7 +680,6 @@ body {
 }
 .date {
   &__text {
-
     &_title {
       font-size: 14px;
       font-weight: 400;

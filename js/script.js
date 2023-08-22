@@ -16,36 +16,42 @@ document.addEventListener('DOMContentLoaded', function () {
   const createNewstickerWindow = document.querySelector(
     '.sticker__window_section'
   );
+  const windowTextTitleDefault = 'Sticker title';
+  const windowTextDescriptionDefault = 'Sticker description';
 
   // sticker ID counter
-  let counterOfStickers = 0;
-
+  let stickerCounter = 0;
   // creating sticker function
   const createNewSticker = function () {
+    windowTextTitle.textContent = windowTextTitleDefault;
+    windowTextDescription.textContent = windowTextDescriptionDefault;
     const sticker = document.createElement('div');
     sticker.classList.add('sticker__card');
-    sticker.id = `sticker${counterOfStickers}`;
+    sticker.id = stickerCounter;
     sticker.setAttribute('contenteditable', 'true');
     grid.insertBefore(sticker, this);
     windowTextTitle.setAttribute('contenteditable', 'true');
     windowTextDescription.setAttribute('contenteditable', 'true');
     windowNewText.classList.remove('hidden');
     overlay.classList.remove('hidden');
-
-    // on progress!!!!! errors
     windowAddButton.addEventListener('click', function () {
-      let stickerTextId = document.getElementById(
-        `sticker${counterOfStickers}`
-      );
-      stickerTextId.textContent = windowTextTitle.textContent;
-      stickerTextId.textContent = windowTextDescription.textContent;
+      const currentSticker = document.getElementById(stickerCounter);
+
+      currentSticker.innerHTML =
+        windowTextTitle.textContent +
+        '<br>' +
+        '<br>' +
+        windowTextDescription.textContent;
+
+      stickerCounter++;
+      closeWindowCreationNewSticker();
     });
-    counterOfStickers++;
   };
 
   // overlay closing function
   const closeWindowOnTapOverlay = function () {
-    const windowNewText = document.querySelector('.sticker__window_section');
+    //del
+    // const windowNewText = document.querySelector('.sticker__window_section');
     overlay.classList.add('hidden');
     windowNewText.classList.add('hidden');
   };
@@ -58,12 +64,26 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // clean text on input window function
-  const removeTextOnNewWindow = function (e) {
-    windowTextTitle.textContent
-      ? (windowTextDescription.textContent = 'Sticker description')
-      : (windowTextTitle.textContent = 'Sticker title');
-    e.textContent = '';
-  };
+  windowTextTitle.addEventListener('focus', () => {
+    if (windowTextTitle.textContent === windowTextTitleDefault) {
+      windowTextTitle.textContent = '';
+    }
+  });
+  windowTextTitle.addEventListener('blur', () => {
+    if (windowTextTitle.textContent === '') {
+      windowTextTitle.textContent = windowTextTitleDefault;
+    }
+  });
+  windowTextDescription.addEventListener('focus', () => {
+    if (windowTextDescription.textContent === windowTextDescriptionDefault) {
+      windowTextDescription.textContent = '';
+    }
+  });
+  windowTextDescription.addEventListener('blur', () => {
+    if (windowTextDescription.textContent === '') {
+      windowTextDescription.textContent = windowTextDescriptionDefault;
+    }
+  });
 
   // creating sticker event
   stickerPlus.addEventListener('click', createNewSticker);
@@ -71,14 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', closeWindowOnTapOverlay);
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
-  // removing text on inputs creation window events
-  windowTextTitle.addEventListener('click', function () {
-    removeTextOnNewWindow(windowTextTitle);
-  });
-  windowTextDescription.addEventListener('click', function () {
-    removeTextOnNewWindow(windowTextDescription);
-  });
-
   // adding text in sticker
   windowAddButton.addEventListener('click', function () {});
 });

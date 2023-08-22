@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     sticker.classList.add('sticker__card');
     sticker.id = stickerCounter;
     sticker.setAttribute('contenteditable', 'true');
+    // const stickerMenu = document.createElement('div');
+    // stickerMenu.classList.add('sticker__card_menu');
+    // sticker.appendChild(stickerMenu);
     grid.insertBefore(sticker, this);
     windowTextTitle.setAttribute('contenteditable', 'true');
     windowTextDescription.setAttribute('contenteditable', 'true');

@@ -430,7 +430,6 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  z-index: 1000;
 }
 .sticker__card::-webkit-scrollbar {
   display: none;

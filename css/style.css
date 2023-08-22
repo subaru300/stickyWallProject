@@ -411,7 +411,7 @@ body {
 .sticker__card {
   width: 240px;
   height: 240px;
-  border-radius: 10px;
+  border-radius: 3px;
   background: #BFCCBA;
   align-items: center;
   justify-content: center;

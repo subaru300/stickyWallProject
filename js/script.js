@@ -29,9 +29,20 @@ document.addEventListener('DOMContentLoaded', function () {
     sticker.classList.add('sticker__card');
     sticker.id = stickerCounter;
     sticker.setAttribute('contenteditable', 'true');
-    // const stickerMenu = document.createElement('div');
-    // stickerMenu.classList.add('sticker__card_menu');
-    // sticker.appendChild(stickerMenu);
+
+    const stickerMenu = document.createElement('div');
+    stickerMenu.classList.add('sticker__card_menu');
+    const menuItem1 = document.createElement('img');
+    menuItem1.src = 'images/edit-icon.svg';
+    const menuItem2 = document.createElement('img');
+    menuItem2.src = 'images/sticker-icon.svg';
+    const menuItem3 = document.createElement('img');
+    menuItem3.src = 'images/trash-icon.svg';
+    stickerMenu.appendChild(menuItem1);
+    stickerMenu.appendChild(menuItem2);
+    stickerMenu.appendChild(menuItem3);
+    sticker.appendChild(stickerMenu);
+
     grid.insertBefore(sticker, this);
     windowTextTitle.setAttribute('contenteditable', 'true');
     windowTextDescription.setAttribute('contenteditable', 'true');

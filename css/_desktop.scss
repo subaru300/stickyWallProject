@@ -475,8 +475,9 @@ body {
   }
 }
 
-.card-add {
+.card__add {
   font-size: 48px;
+  
 }
 
 .sticker {
@@ -491,6 +492,25 @@ body {
     outline: none;
     overflow: scroll;
     padding: 10px;
+    position: relative;
+
+    &_menu {
+      width: 26px;
+      height: 74px;
+      background: $sticker-menu-white;
+      border: none;
+      border-radius: 4px;
+      position: absolute;
+      top: -11px;
+      right: -13px;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
     &::-webkit-scrollbar {
       display: none;
     }

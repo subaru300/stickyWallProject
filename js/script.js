@@ -1,6 +1,5 @@
 'use strict';
 
-// Очікування завантаження контенту сторінки
 document.addEventListener('DOMContentLoaded', function () {
   // variables
   const grid = document.querySelector('.inner__wrapper_sticker');
@@ -19,9 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const windowTextTitleDefault = 'Sticker title';
   const windowTextDescriptionDefault = 'Sticker description';
   let stickerCardMenuDelBtn;
-  // setTimeout(() => {
-  //   console.log(stickerCardMenuDelBtn);
-  // }, 5000);
 
   // sticker ID counter
   let stickerCounter = 0;
@@ -53,25 +49,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuItem1 = document.createElement('img');
     menuItem1.src = 'images/trash-icon.svg';
     menuItem1.id = `del${stickerCounter}`;
-
     stickerCardMenuDelBtn = menuItem1;
     const menuItem2 = document.createElement('img');
     menuItem2.src = 'images/edit-icon.svg';
-
     stickerMenu.appendChild(menuItem1);
     stickerMenu.appendChild(menuItem2);
-
     sticker.appendChild(stickerMenu);
-
     grid.insertBefore(sticker, stickerPlus);
 
-    // windowNewText.classList.remove('hidden');
-    // overlay.classList.remove('hidden');
-
-    // add button click function
-
     const currentSticker = document.getElementById(stickerCounter);
-
     const userInput = windowTextDescription.innerText;
     const items = userInput.split('\n');
     const ul = document.createElement('ul');
@@ -91,29 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
     currentSticker.append(ul);
     stickerCounter++;
     closeWindowCreationNewSticker();
-    // windowAddButton.addEventListener('click', function () {
-    //   const currentSticker = document.getElementById(stickerCounter);
-
-    //   const userInput = windowTextDescription.innerText;
-    //   const items = userInput.split('\n');
-    //   const ul = document.createElement('ul');
-    //   items.forEach(item => {
-    //     if (item.trim() !== '') {
-    //       const li = document.createElement('li');
-    //       li.textContent = item;
-    //       ul.appendChild(li);
-    //     }
-    //   });
-
-    //   const inputHeaderText = document.createElement('p');
-    //   inputHeaderText.textContent = windowTextTitle.textContent;
-    //   inputHeaderText.classList.add('header-bold');
-    //   // currentSticker.innerHTML = '';
-    //   currentSticker.append(inputHeaderText);
-    //   currentSticker.append(ul);
-    //   stickerCounter++;
-    //   closeWindowCreationNewSticker();
-    // });
 
     // del sticket event ON PROGRESS
     const stickerDelete = function () {
@@ -122,12 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     stickerCardMenuDelBtn.addEventListener('click', stickerDelete);
-
-    // розширення стікера В ПРОЦЕСІ
-    // sticker.addEventListener('click', function () {
-    //   sticker.setAttribute('contenteditable', 'true');
-    //   sticker.style.height = '500px';
-    // });
   };
 
   // overlay closing function
@@ -164,30 +121,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Delete Sticker function ON PROGRESS
-  // const delSticker = function (id) {
-  //   const elToDel = document.getElementById(id);
-  //   console.log(elToDel);
-  //   elToDel.remove();
-  // };
-
-  /////!!!!!!!!!!------
-  // creating sticker event
-  // stickerPlus.addEventListener('click', createNewSticker);
-
-  //////////////
-
   stickerPlus.addEventListener('click', openNewStickerWindow);
 
   windowAddButton.addEventListener('click', createNewSticker);
-  //////////////
 
   // overlay closing event
   overlay.addEventListener('click', closeWindowOnTapOverlay);
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
 
-  ////// test buttons sidebar
+  // buttons sidebar
   const buttonsSidebar = document.querySelectorAll('.task__btn');
   const buttonsContainer = document.querySelector('.main__task');
   const pagesMainWindow = document.querySelectorAll('.wrapper__main');

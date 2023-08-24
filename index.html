@@ -34,7 +34,7 @@
             <div class="main__task">
               <h2 class="task__title">Tasks</h2>
               <!-- first task -->
-              <div class="task__upcoming task__active">
+              <div class="task__upcoming task__btn" data-btn="upcoming">
                 <img
                   class="upcoming__icon"
                   src="images/upcoming-icon.svg"
@@ -43,17 +43,17 @@
                 Upcoming
               </div>
               <!-- second task -->
-              <div class="task__today task__active">
+              <div class="task__today task__btn" data-btn="today">
                 <img class="today__icon" src="images/today.svg" alt="" />
                 Today
               </div>
               <!-- third task -->
-              <div class="task__calendar task__active">
+              <div class="task__calendar task__btn" data-btn="calendar">
                 <img class="calendar__icon" src="images/calendar.svg" alt="" />
                 Calendar
               </div>
               <!-- fourth task -->
-              <div class="task__stickywall task__active">
+              <div class="task__stickywall task__btn" data-btn="stickywall">
                 <img
                   class="stickywall__icon"
                   src="images/sticky wall.svg"
@@ -149,7 +149,7 @@
         </div>
 
         <!-- main content -->
-        <div class="wrapper__main">
+        <div class="wrapper__main main--stickywall main--window-active">
           <!-- main title -->
           <div class="main__title">
             <h1 class="title__text">Sticky Wall</h1>
@@ -228,6 +228,9 @@
             </div>
           </div>
         </div>
+        <div class="wrapper__main main--upcoming">upcoming test</div>
+        <div class="wrapper__main main--today">today test</div>
+        <div class="wrapper__main main--calendar">calendar test</div>
       </div>
     </div>
 

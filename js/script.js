@@ -150,7 +150,30 @@ document.addEventListener('DOMContentLoaded', function () {
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
 
-  // del sticket event ON PROGRESS
+  ////// test buttons sidebar
+  const buttonsSidebar = document.querySelectorAll('.task__btn');
+  const buttonsContainer = document.querySelector('.main__task');
+  const pagesMainWindow = document.querySelectorAll('.wrapper__main');
 
-  // stickerCardMenuDelBtn.addEventListener('click', delSticker('0'));
+  buttonsContainer.addEventListener('click', function (e) {
+    const clickedButton = e.target.closest('.task__btn');
+
+    // захист
+    if (!clickedButton) return;
+
+    // активна кнопка
+    buttonsSidebar.forEach(btn => {
+      btn.classList.remove('task__active');
+    });
+    clickedButton.classList.add('task__active');
+
+    // активне вікно
+    pagesMainWindow.forEach(window => {
+      window.classList.remove('main--window-active');
+    });
+    console.log(`${clickedButton.dataset.btn}`);
+    document
+      .querySelector(`.main--${clickedButton.dataset.btn}`)
+      .classList.add('main--window-active');
+  });
 });

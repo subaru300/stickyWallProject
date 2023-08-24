@@ -149,10 +149,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // активне вікно
     pagesMainWindow.forEach(window => {
-      window.classList.remove('main--window-active');
+      window.classList.add('hidden');
     });
     document
       .querySelector(`.main--${clickedButton.dataset.btn}`)
-      .classList.add('main--window-active');
+      .classList.remove('hidden');
   });
+
+  // по замовчанню
+  pagesMainWindow[0].classList.remove('hidden');
+  document;
+  buttonsSidebar[3].classList.add('task__active');
 });

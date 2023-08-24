@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const createNewstickerWindow = document.querySelector(
     '.sticker__window_section'
   );
-  const windowTextTitleDefault = 'Sticker title';
-  const windowTextDescriptionDefault = 'Sticker description';
+  const windowTextTitleDefault = 'Your topic';
+  const windowTextDescriptionDefault = 'Your notes';
   let stickerCardMenuDelBtn;
 
   // sticker ID counter

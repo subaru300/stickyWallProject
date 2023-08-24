@@ -464,39 +464,39 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #EAEAEA;
-  border-radius: 14px;
+  border-radius: 10px;
   z-index: 10;
 }
 .sticker__window_options {
   margin-top: 12px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 25px;
+  margin-bottom: 12px;
 }
 .sticker__window_buttons {
   display: flex;
   justify-content: right;
-  margin-right: 20px;
+  margin-right: 15px;
   gap: 25px;
 }
 
 .window__text_title {
-  width: 340px;
+  width: 360px;
   height: 28px;
   background-color: #fbfbfb;
-  border-radius: 6px;
-  margin: 20px 20px 12px 20px;
+  border-radius: 4px;
+  margin: 10px 10px 12px 10px;
   padding: 6px 10px;
   color: #a1a1a1;
   outline: none;
 }
 .window__text_description {
-  width: 340px;
-  height: 256px;
+  width: 360px;
+  height: 280px;
   background-color: #fbfbfb;
-  border-radius: 6px;
-  margin: 0 20px 12px 20px;
+  border-radius: 4px;
+  margin: 0 10px 12px 10px;
   padding: 6px 10px;
   overflow: scroll;
   color: #a1a1a1;

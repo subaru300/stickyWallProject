@@ -25,10 +25,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // sticker ID counter
   let stickerCounter = 0;
-  // creating sticker function
-  const createNewSticker = function () {
+
+  // open sticker add window function
+  const openNewStickerWindow = function () {
+    createNewstickerWindow.classList.remove('hidden');
+    windowNewText.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    windowTextTitle.setAttribute('contenteditable', 'true');
+    windowTextDescription.setAttribute('contenteditable', 'true');
     windowTextTitle.textContent = windowTextTitleDefault;
     windowTextDescription.textContent = windowTextDescriptionDefault;
+  };
+  // creating sticker function
+  const createNewSticker = function () {
     const sticker = document.createElement('div');
     sticker.classList.add('sticker__card');
     sticker.id = stickerCounter;
@@ -38,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
     sticker.addEventListener('mouseout', function () {
       stickerMenu.style.opacity = '0';
     });
-    // sticker.setAttribute('contenteditable', 'true');
 
     const stickerMenu = document.createElement('div');
     stickerMenu.classList.add('sticker__card_menu');
@@ -49,51 +57,71 @@ document.addEventListener('DOMContentLoaded', function () {
     stickerCardMenuDelBtn = menuItem1;
     const menuItem2 = document.createElement('img');
     menuItem2.src = 'images/edit-icon.svg';
-    // const menuItem3 = document.createElement('img');
-    // menuItem3.src = 'images/sticker-icon.svg';
+
     stickerMenu.appendChild(menuItem1);
     stickerMenu.appendChild(menuItem2);
-    // stickerMenu.appendChild(menuItem3);
+
     sticker.appendChild(stickerMenu);
 
-    grid.insertBefore(sticker, this);
-    windowTextTitle.setAttribute('contenteditable', 'true');
-    windowTextDescription.setAttribute('contenteditable', 'true');
-    windowNewText.classList.remove('hidden');
-    overlay.classList.remove('hidden');
+    grid.insertBefore(sticker, stickerPlus);
+
+    // windowNewText.classList.remove('hidden');
+    // overlay.classList.remove('hidden');
 
     // add button click function
-    windowAddButton.addEventListener('click', function () {
-      const currentSticker = document.getElementById(stickerCounter);
 
-      const userInput = windowTextDescription.innerText;
-      const items = userInput.split('\n');
-      const ul = document.createElement('ul');
-      items.forEach(item => {
-        if (item.trim() !== '') {
-          const li = document.createElement('li');
-          li.textContent = item;
-          ul.appendChild(li);
-        }
-      });
+    const currentSticker = document.getElementById(stickerCounter);
 
-      const inputHeaderText = document.createElement('p');
-      inputHeaderText.textContent = windowTextTitle.textContent;
-      inputHeaderText.classList.add('header-bold');
-      // currentSticker.innerHTML = '';
-      currentSticker.appendChild(inputHeaderText);
-      currentSticker.appendChild(ul);
-
-      stickerCounter++;
-      closeWindowCreationNewSticker();
+    const userInput = windowTextDescription.innerText;
+    const items = userInput.split('\n');
+    const ul = document.createElement('ul');
+    items.forEach(item => {
+      if (item.trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      }
     });
+
+    const inputHeaderText = document.createElement('p');
+    inputHeaderText.textContent = windowTextTitle.textContent;
+    inputHeaderText.classList.add('header-bold');
+    // currentSticker.innerHTML = '';
+    currentSticker.append(inputHeaderText);
+    currentSticker.append(ul);
+    stickerCounter++;
+    closeWindowCreationNewSticker();
+    // windowAddButton.addEventListener('click', function () {
+    //   const currentSticker = document.getElementById(stickerCounter);
+
+    //   const userInput = windowTextDescription.innerText;
+    //   const items = userInput.split('\n');
+    //   const ul = document.createElement('ul');
+    //   items.forEach(item => {
+    //     if (item.trim() !== '') {
+    //       const li = document.createElement('li');
+    //       li.textContent = item;
+    //       ul.appendChild(li);
+    //     }
+    //   });
+
+    //   const inputHeaderText = document.createElement('p');
+    //   inputHeaderText.textContent = windowTextTitle.textContent;
+    //   inputHeaderText.classList.add('header-bold');
+    //   // currentSticker.innerHTML = '';
+    //   currentSticker.append(inputHeaderText);
+    //   currentSticker.append(ul);
+    //   stickerCounter++;
+    //   closeWindowCreationNewSticker();
+    // });
 
     // del sticket event ON PROGRESS
-
-    stickerCardMenuDelBtn.addEventListener('click', function () {
+    const stickerDelete = function () {
       const elToDel = document.getElementById(sticker.id);
       elToDel.remove();
-    });
+    };
+
+    stickerCardMenuDelBtn.addEventListener('click', stickerDelete);
 
     // розширення стікера В ПРОЦЕСІ
     // sticker.addEventListener('click', function () {
@@ -143,8 +171,17 @@ document.addEventListener('DOMContentLoaded', function () {
   //   elToDel.remove();
   // };
 
+  /////!!!!!!!!!!------
   // creating sticker event
-  stickerPlus.addEventListener('click', createNewSticker);
+  // stickerPlus.addEventListener('click', createNewSticker);
+
+  //////////////
+
+  stickerPlus.addEventListener('click', openNewStickerWindow);
+
+  windowAddButton.addEventListener('click', createNewSticker);
+  //////////////
+
   // overlay closing event
   overlay.addEventListener('click', closeWindowOnTapOverlay);
   // close button event
@@ -171,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function () {
     pagesMainWindow.forEach(window => {
       window.classList.remove('main--window-active');
     });
-    console.log(`${clickedButton.dataset.btn}`);
     document
       .querySelector(`.main--${clickedButton.dataset.btn}`)
       .classList.add('main--window-active');

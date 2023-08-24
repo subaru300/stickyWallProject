@@ -420,6 +420,7 @@ body {
   overflow: scroll;
   padding: 10px;
   position: relative;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 .sticker__card_menu {
   width: 32px;

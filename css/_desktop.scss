@@ -478,25 +478,24 @@ body {
 .card__add {
 }
 
-
 .sticker {
   &__card {
     font-size: 48px;
-      width: 240px;
-      height: 240px;
-      border-radius: 6px;
-      background: $green-bg;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      outline: none;
-      overflow: scroll;
-      padding: 10px;
-      position: relative;
-      box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
-      &::-webkit-scrollbar {
-        display: none;
-      }
+    width: 240px;
+    height: 240px;
+    border-radius: 6px;
+    background: $green-bg;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    overflow: scroll;
+    padding: 10px;
+    position: relative;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &_new {
       width: 240px;
@@ -516,7 +515,6 @@ body {
       }
     }
 
-
     &_menu {
       width: 32px;
       height: 60px;
@@ -535,7 +533,6 @@ body {
       transition: 0.7s;
       transition-delay: 1s;
     }
-
   }
 
   // &__card-plus {

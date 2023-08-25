@@ -191,7 +191,6 @@ body {
 .main {
   // here nothing write yet
   &__list {
-    position: relative;
   }
 }
 .list {
@@ -217,7 +216,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
     height: 28px;
     font-size: 16px;
     font-weight: 600;
@@ -290,13 +289,13 @@ body {
 }
 .personal {
   &__number {
-    width: 14px;
-    height: 14px;
-    font-size: 12px;
-    background-color: #d9d9d9;
-    text-align: center;
-    border-radius: 2px;
-    margin-left: 95px;
+    // width: 14px;
+    // height: 14px;
+    // font-size: 12px;
+    // background-color: #d9d9d9;
+    // text-align: center;
+    // border-radius: 2px;
+    // margin-left: 95px;
   }
 }
 .work {
@@ -663,7 +662,7 @@ body {
   position: absolute;
   top: 24px;
   border-radius: 2px;
-  display: none
+  display: none;
 }
 
 .window__category_item {
@@ -671,10 +670,7 @@ body {
   height: 20px;
   background: rgb(215, 215, 215);
   text-align: center;
-<<<<<<< HEAD
-=======
   list-style: none;
->>>>>>> origin/main
 }
 
 .option {
@@ -786,17 +782,15 @@ body {
 
 .list {
   &__modal {
-    position: absolute;
-    height: 50px;
-    width: 250px;
-    top: -10px;
+    height: 28px;
+    width: 260px;
+    margin: 5px 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
     background-color: $sidebar-border-gray;
     border-radius: 4px;
-    z-index: 10;
   }
 }
 
@@ -814,20 +808,17 @@ body {
 }
 .inner {
   &__color {
-<<<<<<< HEAD
     &_icon {
-      width: 20px;
-      margin-left: 10px;
+      width: 16px;
+      margin-left: 8px;
+      margin-top: 3px;
     }
-=======
-
->>>>>>> origin/main
   }
 
   &__input {
     &_text {
-      width: 160px;
-      height: 30px;
+      width: 180px;
+      height: 25px;
       border: none;
       border-radius: 4px;
       font-size: 14px;
@@ -837,8 +828,8 @@ body {
 
   &__btn {
     &_item {
-      padding: 5px;
-      margin-right: 10px;
+      padding: 8px;
+      padding: 5px 5px;
       background-color: $window-btn-gray;
       border-radius: 4px;
     }
@@ -847,4 +838,46 @@ body {
 
 .hidden {
   display: none;
+}
+
+.list {
+  &_active {
+  }
+
+  &_text {
+    width: 180px;
+    padding: 0 5px;
+  }
+
+  &__personal {
+    display: flex;
+    // cursor: pointer;
+
+    align-items: center;
+
+    height: 28px;
+    margin: 5px 0;
+    // font-size: 16px;
+    // font-weight: 600;
+    color: $sidebar-text-black;
+    // transition: 0.6s ease;
+    // border-radius: 4px;
+    // background: #eaeaea;
+    // padding-left: 10px;
+  }
+}
+.personal {
+  &__icon {
+    &_red {
+    }
+  }
+
+  &__number {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    background-color: #d9d9d9;
+    text-align: center;
+    border-radius: 2px;
+  }
 }

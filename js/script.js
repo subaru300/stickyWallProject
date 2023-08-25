@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const pagesMainWindow = document.querySelectorAll('.wrapper__main');
   const newListButton = document.querySelector('.list__newlist');
   const newListModal = document.querySelector('.list__modal');
-  const newListOkButton = document.querySelector('.inner__btn_item');
+
+  const listBlock = document.querySelector('.main__list');
 
   // sticker ID counter
   let stickerCounter = 0;
@@ -160,35 +161,43 @@ document.addEventListener('DOMContentLoaded', function () {
   document;
   buttonsSidebar[3].classList.add('task__active');
 
-  const openNewListWindow = function () {
+  const newListOkButton = document.querySelector('.inner__btn_item');
+
+  const createNewListCategory = function () {
     newListModal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
+    newListButton.classList.add('hidden');
   };
   const createNewList = function () {
-    // пізніше, нема вже сил і терпіння))
+    newListModal.classList.add('hidden');
+    newListButton.classList.remove('hidden');
+
+    const newListElement = document.createElement('div');
+    newListElement.classList.add('list__personal');
+    const img = document.createElement('img');
+    img.classList.add('personal__icon_red');
+    img.src = 'images/red.svg';
+    const listName = document.createElement('div');
+    listName.classList.add('list_text');
+    const inputTextContent = document.querySelector('.inner__input_text');
+    listName.textContent = inputTextContent.value;
+    inputTextContent.value = '';
+
+    const listStickerNumber = document.createElement('div');
+    listStickerNumber.classList.add('personal__number');
+
+    newListElement.appendChild(img);
+    newListElement.appendChild(listName);
+    newListElement.appendChild(listStickerNumber);
+
+    listBlock.append(newListElement);
   };
+
   // add new list event
-  newListButton.addEventListener('click', openNewListWindow);
+  newListButton.addEventListener('click', createNewListCategory);
+
   newListOkButton.addEventListener('click', createNewList);
 });
 
-<<<<<<< HEAD
-// const windowOptionCategory = document.querySelector('.option__category');
-// const optionCategory = function () {
-//   const windowCategoryList = document.createElement('ul');
-//   windowCategoryList.classList.add('window__category_list');
-
-//   const windowCategoryItem = document.createElement('li');
-//   windowCategoryItem.classList.add('window__category_item');
-//   windowCategoryItem.textContent = 'item 1';
-
-//   windowCategoryList.appendChild(windowCategoryItem);
-//   windowOptionCategory.appendChild(windowCategoryList);
-//   this.removeEventListener('click', optionCategory);
-// }
-
-// windowOptionCategory.addEventListener('click', optionCategory);
-=======
 // window category list
 let categoryIsOpen = false;
 
@@ -204,7 +213,7 @@ windowOptionCategory.appendChild(windowCategoryList);
 
 const optionCategory = function () {
   categoryIsOpen = !categoryIsOpen;
-  
+
   if (categoryIsOpen) {
     categoryIcon.style.transform = 'rotate(180deg)';
     windowCategoryList.style.display = 'block';
@@ -212,7 +221,6 @@ const optionCategory = function () {
     categoryIcon.style.transform = 'rotate(0deg)';
     windowCategoryList.style.display = 'none';
   }
-}
+};
 
 windowOptionCategory.addEventListener('click', optionCategory);
->>>>>>> origin/main

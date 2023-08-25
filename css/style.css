@@ -181,10 +181,6 @@ body {
   margin: 5px 0 4px 8px;
 }
 
-.main__list {
-  position: relative;
-}
-
 .list__line {
   width: 260px;
   height: 1.5px;
@@ -204,7 +200,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   height: 28px;
   font-size: 16px;
   font-weight: 600;
@@ -267,16 +263,6 @@ body {
   background: #eaeaea;
   padding-left: 10px;
   margin-top: 5px;
-}
-
-.personal__number {
-  width: 14px;
-  height: 14px;
-  font-size: 12px;
-  background-color: #d9d9d9;
-  text-align: center;
-  border-radius: 2px;
-  margin-left: 95px;
 }
 
 .work__number {
@@ -651,38 +637,58 @@ body {
 }
 
 .list__modal {
-  position: absolute;
-  height: 50px;
-  width: 250px;
-  top: -10px;
+  height: 28px;
+  width: 260px;
+  margin: 5px 0;
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
   background-color: #EEEEEE;
   border-radius: 4px;
-  z-index: 10;
 }
 
 .inner__color_icon {
-  width: 20px;
-  margin-left: 10px;
+  width: 16px;
+  margin-left: 8px;
+  margin-top: 3px;
 }
 .inner__input_text {
-  width: 160px;
-  height: 30px;
+  width: 180px;
+  height: 25px;
   border: none;
   border-radius: 4px;
   font-size: 14px;
   padding: 0 5px;
 }
 .inner__btn_item {
-  padding: 5px;
-  margin-right: 10px;
+  padding: 8px;
+  padding: 5px 5px;
   background-color: rgba(161, 161, 161, 0.4);
   border-radius: 4px;
 }
 
 .hidden {
   display: none;
+}
+
+.list_text {
+  width: 180px;
+  padding: 0 5px;
+}
+.list__personal {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  margin: 5px 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.personal__number {
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  background-color: #d9d9d9;
+  text-align: center;
+  border-radius: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const windowTextTitleDefault = 'Your topic';
   const windowTextDescriptionDefault = 'Your notes';
   let stickerCardMenuDelBtn;
+  // buttons sidebar
+  const buttonsSidebar = document.querySelectorAll('.task__btn');
+  const buttonsContainer = document.querySelector('.main__task');
+  const pagesMainWindow = document.querySelectorAll('.wrapper__main');
 
   // sticker ID counter
   let stickerCounter = 0;
@@ -78,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stickerCounter++;
     closeWindowCreationNewSticker();
 
-    // del sticket event ON PROGRESS
+    // del sticker
     const stickerDelete = function () {
       const elToDel = document.getElementById(sticker.id);
       elToDel.remove();
@@ -99,6 +103,23 @@ document.addEventListener('DOMContentLoaded', function () {
     windowNewText.classList.add('hidden');
     overlay.classList.add('hidden');
   };
+
+  //side bar buttons function
+  const sideBarButtonSelection = function (e) {
+    const clickedButton = e.target.closest('.task__btn');
+    if (!clickedButton) return;
+    buttonsSidebar.forEach(btn => {
+      btn.classList.remove('task__active');
+    });
+    clickedButton.classList.add('task__active');
+    pagesMainWindow.forEach(window => {
+      window.classList.add('hidden');
+    });
+    document
+      .querySelector(`.main--${clickedButton.dataset.btn}`)
+      .classList.remove('hidden');
+  };
+
   // clean text on input window function
   windowTextTitle.addEventListener('focus', () => {
     if (windowTextTitle.textContent === windowTextTitleDefault) {
@@ -122,41 +143,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   stickerPlus.addEventListener('click', openNewStickerWindow);
-
   windowAddButton.addEventListener('click', createNewSticker);
-
   // overlay closing event
   overlay.addEventListener('click', closeWindowOnTapOverlay);
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
+  // side bar navigation
+  buttonsContainer.addEventListener('click', sideBarButtonSelection);
 
-  // buttons sidebar
-  const buttonsSidebar = document.querySelectorAll('.task__btn');
-  const buttonsContainer = document.querySelector('.main__task');
-  const pagesMainWindow = document.querySelectorAll('.wrapper__main');
-
-  buttonsContainer.addEventListener('click', function (e) {
-    const clickedButton = e.target.closest('.task__btn');
-
-    // захист
-    if (!clickedButton) return;
-
-    // активна кнопка
-    buttonsSidebar.forEach(btn => {
-      btn.classList.remove('task__active');
-    });
-    clickedButton.classList.add('task__active');
-
-    // активне вікно
-    pagesMainWindow.forEach(window => {
-      window.classList.add('hidden');
-    });
-    document
-      .querySelector(`.main--${clickedButton.dataset.btn}`)
-      .classList.remove('hidden');
-  });
-
-  // по замовчанню
+  // side bar position по замовчанню
   pagesMainWindow[0].classList.remove('hidden');
   document;
   buttonsSidebar[3].classList.add('task__active');

@@ -481,7 +481,7 @@ body {
   margin-top: 12px;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 18px;
   margin-bottom: 12px;
 }
 .sticker__window_buttons {
@@ -558,32 +558,25 @@ body {
 }
 
 .option__category {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100px;
+  width: 108px;
   height: 24px;
-  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
   background-color: #fbfbfb;
   border-radius: 2px;
   position: relative;
 }
-.option__category_rec {
-  width: 16px;
-  height: 16px;
-  border: none;
-  border-radius: 2px;
-  background: rgba(255, 184, 53, 0.6);
-}
 .option__category_text {
   display: flex;
-  gap: 10px;
+  gap: 18px;
 }
 .option__calendar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
+  width: 108px;
   height: 24px;
   background-color: #fbfbfb;
   padding: 4px;
@@ -593,7 +586,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
+  width: 108px;
   padding: 4px;
   height: 24px;
   background-color: #fbfbfb;
@@ -604,8 +597,9 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: rgba(255, 184, 53, 0.6);
-  margin-left: 8px;
+  margin-left: 0px;
 }
+
 .calendar__text_title {
   font-size: 14px;
   font-weight: 400;

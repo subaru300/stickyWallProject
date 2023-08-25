@@ -586,7 +586,7 @@ body {
       margin-top: 12px;
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 18px;
       margin-bottom: 12px;
     }
 
@@ -679,27 +679,27 @@ body {
 
 .option {
   &__category {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100px;
+    width: 108px;
     height: 24px;
-    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
     background-color: #fbfbfb;
     border-radius: 2px;
     position: relative;
-
-    &_rec {
-      width: 16px;
-      height: 16px;
-      border: none;
-      border-radius: 2px;
-      background: $sidebar-rec-yellow;
-    }
-
-    &_text {
-      display: flex;
-      gap: 10px;
+    
+    // &_rec {
+      //   width: 16px;
+      //   height: 16px;
+      //   border: none;
+      //   border-radius: 2px;
+      //   background: $sidebar-rec-yellow;
+      // }
+      
+      &_text {
+        display: flex;
+        gap: 18px;
     }
   }
 
@@ -707,7 +707,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100px;
+    width: 108px;
     height: 24px;
     background-color: #fbfbfb;
     padding: 4px;
@@ -718,7 +718,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100px;
+    width: 108px;
     padding: 4px;
     height: 24px;
     background-color: #fbfbfb;
@@ -731,11 +731,7 @@ body {
       font-size: 14px;
       font-weight: 400;
       color: $sidebar-rec-yellow;
-      margin-left: 8px;
-    }
-
-    &_icon {
-      // transform: rotate(180deg);
+      margin-left: 0px;
     }
   }
 }

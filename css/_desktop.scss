@@ -476,28 +476,50 @@ body {
 }
 
 .card__add {
-  font-size: 48px;
 }
 
 
 .sticker {
   &__card {
-    width: 240px;
-    height: 240px;
-    border-radius: 6px;
-    background: $green-bg;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    outline: none;
-    overflow: scroll;
-    padding: 10px;
-    position: relative;
+    font-size: 48px;
+      width: 240px;
+      height: 240px;
+      border-radius: 6px;
+      background: $green-bg;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      outline: none;
+      overflow: scroll;
+      padding: 10px;
+      position: relative;
+      box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+    &_new {
+      width: 240px;
+      height: 240px;
+      border-radius: 6px;
+      background: $green-bg;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      outline: none;
+      overflow: scroll;
+      padding: 10px;
+      position: relative;
+      box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
 
 
     &_menu {
       width: 32px;
-      height: 92px;
+      height: 60px;
       background: $sticker-menu-white;
       border: none;
       border-radius: 0 4px 0 4px;
@@ -514,9 +536,6 @@ body {
       transition-delay: 1s;
     }
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   // &__card-plus {
@@ -559,7 +578,7 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
       background-color: $sidebar-hover-gray;
-      border-radius: 14px;
+      border-radius: 10px;
       z-index: 10;
     }
 
@@ -570,14 +589,14 @@ body {
       margin-top: 12px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
+      gap: 25px;
+      margin-bottom: 12px;
     }
 
     &_buttons {
       display: flex;
       justify-content: right;
-      margin-right: 20px;
+      margin-right: 15px;
       gap: 25px;
     }
   }
@@ -585,22 +604,22 @@ body {
 .window {
   &__text {
     &_title {
-      width: 340px;
+      width: 360px;
       height: 28px;
       background-color: #fbfbfb;
-      border-radius: 6px;
-      margin: 20px 20px 12px 20px;
+      border-radius: 4px;
+      margin: 10px 10px 12px 10px;
       padding: 6px 10px;
       color: $calendar-gray;
       outline: none;
     }
 
     &_description {
-      width: 340px;
-      height: 256px;
+      width: 360px;
+      height: 280px;
       background-color: #fbfbfb;
-      border-radius: 6px;
-      margin: 0 20px 12px 20px;
+      border-radius: 4px;
+      margin: 0 10px 12px 10px;
       padding: 6px 10px;
       overflow: scroll;
       color: $calendar-gray;
@@ -726,4 +745,19 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+.main--upcoming {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.main--today {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.main--calendar {
+  font-weight: 700;
+  font-size: 40px;
 }

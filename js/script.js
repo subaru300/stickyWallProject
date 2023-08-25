@@ -15,13 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const createNewstickerWindow = document.querySelector(
     '.sticker__window_section'
   );
-  const windowTextTitleDefault = 'Sticker title';
-  const windowTextDescriptionDefault = 'Sticker description';
+  const windowTextTitleDefault = 'Your topic';
+  const windowTextDescriptionDefault = 'Your notes';
   let stickerCardMenuDelBtn;
+  // buttons sidebar
+  const buttonsSidebar = document.querySelectorAll('.task__btn');
+  const buttonsContainer = document.querySelector('.main__task');
+  const pagesMainWindow = document.querySelectorAll('.wrapper__main');
 
   // sticker ID counter
   let stickerCounter = 0;
-
+  
   // open sticker add window function
   const openNewStickerWindow = function () {
     createNewstickerWindow.classList.remove('hidden');
@@ -35,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // creating sticker function
   const createNewSticker = function () {
     const sticker = document.createElement('div');
-    sticker.classList.add('sticker__card');
+    sticker.classList.add('sticker__card_new');
     sticker.id = stickerCounter;
     sticker.addEventListener('mouseover', function () {
       stickerMenu.style.opacity = '1';
@@ -43,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sticker.addEventListener('mouseout', function () {
       stickerMenu.style.opacity = '0';
     });
-
+    
     const stickerMenu = document.createElement('div');
     stickerMenu.classList.add('sticker__card_menu');
     const menuItem1 = document.createElement('img');
@@ -56,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stickerMenu.appendChild(menuItem2);
     sticker.appendChild(stickerMenu);
     grid.insertBefore(sticker, stickerPlus);
-
+    
     const currentSticker = document.getElementById(stickerCounter);
     const userInput = windowTextDescription.innerText;
     const items = userInput.split('\n');
@@ -68,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ul.appendChild(li);
       }
     });
-
+    
     const inputHeaderText = document.createElement('p');
     inputHeaderText.textContent = windowTextTitle.textContent;
     inputHeaderText.classList.add('header-bold');
@@ -78,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stickerCounter++;
     closeWindowCreationNewSticker();
 
-    // del sticket event ON PROGRESS
+    // del sticker
     const stickerDelete = function () {
       const elToDel = document.getElementById(sticker.id);
       elToDel.remove();
@@ -99,6 +103,23 @@ document.addEventListener('DOMContentLoaded', function () {
     windowNewText.classList.add('hidden');
     overlay.classList.add('hidden');
   };
+
+  //side bar buttons function
+  const sideBarButtonSelection = function (e) {
+    const clickedButton = e.target.closest('.task__btn');
+    if (!clickedButton) return;
+    buttonsSidebar.forEach(btn => {
+      btn.classList.remove('task__active');
+    });
+    clickedButton.classList.add('task__active');
+    pagesMainWindow.forEach(window => {
+      window.classList.add('hidden');
+    });
+    document
+      .querySelector(`.main--${clickedButton.dataset.btn}`)
+      .classList.remove('hidden');
+  };
+
   // clean text on input window function
   windowTextTitle.addEventListener('focus', () => {
     if (windowTextTitle.textContent === windowTextTitleDefault) {
@@ -122,37 +143,20 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   stickerPlus.addEventListener('click', openNewStickerWindow);
-
   windowAddButton.addEventListener('click', createNewSticker);
-
   // overlay closing event
   overlay.addEventListener('click', closeWindowOnTapOverlay);
   // close button event
   windowCancelButton.addEventListener('click', closeWindowCreationNewSticker);
+  // side bar navigation
+  buttonsContainer.addEventListener('click', sideBarButtonSelection);
 
-  // buttons sidebar
-  const buttonsSidebar = document.querySelectorAll('.task__btn');
-  const buttonsContainer = document.querySelector('.main__task');
-  const pagesMainWindow = document.querySelectorAll('.wrapper__main');
-
-  buttonsContainer.addEventListener('click', function (e) {
-    const clickedButton = e.target.closest('.task__btn');
-
-    // захист
-    if (!clickedButton) return;
-
-    // активна кнопка
-    buttonsSidebar.forEach(btn => {
-      btn.classList.remove('task__active');
-    });
-    clickedButton.classList.add('task__active');
-
-    // активне вікно
-    pagesMainWindow.forEach(window => {
-      window.classList.remove('main--window-active');
-    });
-    document
-      .querySelector(`.main--${clickedButton.dataset.btn}`)
-      .classList.add('main--window-active');
-  });
+  // side bar position по замовчанню
+  pagesMainWindow[0].classList.remove('hidden');
+  document;
+  buttonsSidebar[3].classList.add('task__active');
 });
+
+
+
+

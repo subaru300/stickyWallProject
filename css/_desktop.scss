@@ -7,10 +7,6 @@ body {
   justify-content: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .app {
   &__section {
     width: 1140px;
@@ -195,6 +191,7 @@ body {
 .main {
   // here nothing write yet
   &__list {
+    position: relative;
   }
 }
 .list {
@@ -674,7 +671,6 @@ body {
   background: white;
   border: 1px solid red;
   text-align: center;
-
 }
 
 .option {
@@ -780,20 +776,24 @@ body {
   font-size: 40px;
 }
 
-
-
-
 .list {
-
   &__modal {
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    top: -10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: $sidebar-border-gray;
+    border-radius: 4px;
+    z-index: 10;
   }
 }
-.hidden {
-}
+
 .modal {
-
   &__inner {
-
     &_container {
     }
 
@@ -805,19 +805,34 @@ body {
   }
 }
 .inner {
-
   &__color {
+    &_icon {
+      width: 20px;
+      margin-left: 10px;
+    }
   }
 
   &__input {
-
     &_text {
+      width: 160px;
+      height: 30px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      padding: 0 5px;
     }
   }
 
   &__btn {
-
     &_item {
+      padding: 5px;
+      margin-right: 10px;
+      background-color: $window-btn-gray;
+      border-radius: 4px;
     }
   }
+}
+
+.hidden {
+  display: none;
 }

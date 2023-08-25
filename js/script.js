@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const pagesMainWindow = document.querySelectorAll('.wrapper__main');
   const newListButton = document.querySelector('.list__newlist');
   const newListModal = document.querySelector('.list__modal');
+  const newListOkButton = document.querySelector('.inner__btn_item');
 
   // sticker ID counter
   let stickerCounter = 0;
@@ -97,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeWindowOnTapOverlay = function () {
     overlay.classList.add('hidden');
     windowNewText.classList.add('hidden');
+    newListModal.classList.add('hidden');
   };
 
   // close button function on creation window
@@ -162,24 +164,26 @@ document.addEventListener('DOMContentLoaded', function () {
     newListModal.classList.remove('hidden');
     overlay.classList.remove('hidden');
   };
+  const createNewList = function () {
+    // пізніше, нема вже сил і терпіння))
+  };
   // add new list event
   newListButton.addEventListener('click', openNewListWindow);
+  newListOkButton.addEventListener('click', createNewList);
 });
 
-const windowOptionCategory = document.querySelector('.option__category');
-const optionCategory = function () {
-  const windowCategoryList = document.createElement('ul');
-  windowCategoryList.classList.add('window__category_list');
+// const windowOptionCategory = document.querySelector('.option__category');
+// const optionCategory = function () {
+//   const windowCategoryList = document.createElement('ul');
+//   windowCategoryList.classList.add('window__category_list');
 
-  const windowCategoryItem = document.createElement('li');
-  windowCategoryItem.classList.add('window__category_item');
-  windowCategoryItem.textContent = 'item 1';
+//   const windowCategoryItem = document.createElement('li');
+//   windowCategoryItem.classList.add('window__category_item');
+//   windowCategoryItem.textContent = 'item 1';
 
-  windowCategoryList.appendChild(windowCategoryItem);
-  windowOptionCategory.appendChild(windowCategoryList);
-  this.removeEventListener('click', optionCategory);
-}
+//   windowCategoryList.appendChild(windowCategoryItem);
+//   windowOptionCategory.appendChild(windowCategoryList);
+//   this.removeEventListener('click', optionCategory);
+// }
 
-
-windowOptionCategory.addEventListener('click', optionCategory);
-
+// windowOptionCategory.addEventListener('click', optionCategory);

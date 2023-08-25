@@ -22,10 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const buttonsSidebar = document.querySelectorAll('.task__btn');
   const buttonsContainer = document.querySelector('.main__task');
   const pagesMainWindow = document.querySelectorAll('.wrapper__main');
+  const newListButton = document.querySelector('.list__newlist');
+  const newListModal = document.querySelector('.list__modal');
 
   // sticker ID counter
   let stickerCounter = 0;
-  
+
   // open sticker add window function
   const openNewStickerWindow = function () {
     createNewstickerWindow.classList.remove('hidden');
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sticker.addEventListener('mouseout', function () {
       stickerMenu.style.opacity = '0';
     });
-    
+
     const stickerMenu = document.createElement('div');
     stickerMenu.classList.add('sticker__card_menu');
     const menuItem1 = document.createElement('img');
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stickerMenu.appendChild(menuItem2);
     sticker.appendChild(stickerMenu);
     grid.insertBefore(sticker, stickerPlus);
-    
+
     const currentSticker = document.getElementById(stickerCounter);
     const userInput = windowTextDescription.innerText;
     const items = userInput.split('\n');
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ul.appendChild(li);
       }
     });
-    
+
     const inputHeaderText = document.createElement('p');
     inputHeaderText.textContent = windowTextTitle.textContent;
     inputHeaderText.classList.add('header-bold');
@@ -155,6 +157,13 @@ document.addEventListener('DOMContentLoaded', function () {
   pagesMainWindow[0].classList.remove('hidden');
   document;
   buttonsSidebar[3].classList.add('task__active');
+
+  const openNewListWindow = function () {
+    newListModal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+  };
+  // add new list event
+  newListButton.addEventListener('click', openNewListWindow);
 });
 
 const windowOptionCategory = document.querySelector('.option__category');

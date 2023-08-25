@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
   newListOkButton.addEventListener('click', createNewList);
 });
 
+<<<<<<< HEAD
 // const windowOptionCategory = document.querySelector('.option__category');
 // const optionCategory = function () {
 //   const windowCategoryList = document.createElement('ul');
@@ -187,3 +188,31 @@ document.addEventListener('DOMContentLoaded', function () {
 // }
 
 // windowOptionCategory.addEventListener('click', optionCategory);
+=======
+// window category list
+let categoryIsOpen = false;
+
+const windowOptionCategory = document.querySelector('.option__category');
+const categoryIcon = document.querySelector('.category__text_icon');
+const windowCategoryList = document.createElement('ul');
+windowCategoryList.classList.add('window__category_list');
+const windowCategoryItem = document.createElement('li');
+windowCategoryItem.classList.add('window__category_item');
+windowCategoryItem.textContent = 'item 1';
+windowCategoryList.appendChild(windowCategoryItem);
+windowOptionCategory.appendChild(windowCategoryList);
+
+const optionCategory = function () {
+  categoryIsOpen = !categoryIsOpen;
+  
+  if (categoryIsOpen) {
+    categoryIcon.style.transform = 'rotate(180deg)';
+    windowCategoryList.style.display = 'block';
+  } else {
+    categoryIcon.style.transform = 'rotate(0deg)';
+    windowCategoryList.style.display = 'none';
+  }
+}
+
+windowOptionCategory.addEventListener('click', optionCategory);
+>>>>>>> origin/main

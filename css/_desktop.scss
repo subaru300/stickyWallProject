@@ -658,19 +658,23 @@ body {
 
 .window__category_list {
   width: 100px;
-  height: 60px;
+  max-height: 100%;
   background: rgb(145, 138, 138);
   position: absolute;
   top: 24px;
   border-radius: 2px;
+  display: none
 }
 
 .window__category_item {
   width: 100px;
   height: 20px;
-  background: white;
-  border: 1px solid red;
+  background: rgb(215, 215, 215);
   text-align: center;
+<<<<<<< HEAD
+=======
+  list-style: none;
+>>>>>>> origin/main
 }
 
 .option {
@@ -728,6 +732,10 @@ body {
       font-weight: 400;
       color: $sidebar-rec-yellow;
       margin-left: 8px;
+    }
+
+    &_icon {
+      // transform: rotate(180deg);
     }
   }
 }
@@ -806,10 +814,14 @@ body {
 }
 .inner {
   &__color {
+<<<<<<< HEAD
     &_icon {
       width: 20px;
       margin-left: 10px;
     }
+=======
+
+>>>>>>> origin/main
   }
 
   &__input {

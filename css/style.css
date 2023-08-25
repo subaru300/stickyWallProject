@@ -546,19 +546,20 @@ body {
 
 .window__category_list {
   width: 100px;
-  height: 60px;
+  max-height: 100%;
   background: rgb(145, 138, 138);
   position: absolute;
   top: 24px;
   border-radius: 2px;
+  display: none;
 }
 
 .window__category_item {
   width: 100px;
   height: 20px;
-  background: white;
-  border: 1px solid red;
+  background: rgb(215, 215, 215);
   text-align: center;
+  list-style: none;
 }
 
 .option__category {
@@ -610,7 +611,6 @@ body {
   color: rgba(255, 184, 53, 0.6);
   margin-left: 8px;
 }
-
 .calendar__text_title {
   font-size: 14px;
   font-weight: 400;

@@ -493,7 +493,7 @@ body {
       overflow: scroll;
       padding: 10px;
       position: relative;
-      box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
       &::-webkit-scrollbar {
         display: none;
       }
@@ -601,6 +601,7 @@ body {
     }
   }
 }
+
 .window {
   &__text {
     &_title {
@@ -660,6 +661,25 @@ body {
     }
   }
 }
+
+.window__category_list {
+  width: 100px;
+  height: 60px;
+  background: rgb(145, 138, 138);
+  position: absolute;
+  top: 24px;
+  border-radius: 2px;
+}
+
+.window__category_item {
+  width: 100px;
+  height: 20px;
+  background: white;
+  border: 1px solid red;
+  text-align: center;
+
+}
+
 .option {
   &__category {
     display: flex;
@@ -670,6 +690,7 @@ body {
     padding: 4px;
     background-color: #fbfbfb;
     border-radius: 2px;
+    position: relative;
 
     &_rec {
       width: 16px;

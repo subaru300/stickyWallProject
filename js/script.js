@@ -157,6 +157,20 @@ document.addEventListener('DOMContentLoaded', function () {
   buttonsSidebar[3].classList.add('task__active');
 });
 
+const windowOptionCategory = document.querySelector('.option__category');
+const optionCategory = function () {
+  const windowCategoryList = document.createElement('ul');
+  windowCategoryList.classList.add('window__category_list');
+
+  const windowCategoryItem = document.createElement('li');
+  windowCategoryItem.classList.add('window__category_item');
+  windowCategoryItem.textContent = 'item 1';
+
+  windowCategoryList.appendChild(windowCategoryItem);
+  windowOptionCategory.appendChild(windowCategoryList);
+  this.removeEventListener('click', optionCategory);
+}
 
 
+windowOptionCategory.addEventListener('click', optionCategory);
 

@@ -36,10 +36,6 @@ body {
   justify-content: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .app__section {
   width: 1140px;
   height: 660px;
@@ -199,7 +195,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   height: 28px;
   font-size: 16px;
   font-weight: 600;
@@ -262,16 +258,6 @@ body {
   background: #eaeaea;
   padding-left: 10px;
   margin-top: 5px;
-}
-
-.personal__number {
-  width: 14px;
-  height: 14px;
-  font-size: 12px;
-  background-color: #d9d9d9;
-  text-align: center;
-  border-radius: 2px;
-  margin-left: 95px;
 }
 
 .work__number {
@@ -540,18 +526,18 @@ body {
 }
 
 .window__category_list {
-  width: 100px;
-  max-height: 100%;
+  width: 108px;
   background: rgb(145, 138, 138);
   position: absolute;
   top: 24px;
+  left: 0px;
   border-radius: 2px;
   display: none;
 }
 
 .window__category_item {
-  width: 100px;
-  height: 20px;
+  width: 108px;
+  height: 24px;
   background: rgb(215, 215, 215);
   text-align: center;
   list-style: none;
@@ -636,4 +622,69 @@ body {
 .main--calendar {
   font-weight: 700;
   font-size: 40px;
+}
+
+.list__modal {
+  height: 28px;
+  width: 260px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+}
+
+.inner__color_icon {
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 0, 0, 0.6);
+  border-radius: 2px;
+  margin-left: 6px;
+}
+.inner__input_text {
+  width: 180px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 0 5px;
+  outline: none;
+}
+.inner__btn_item {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(161, 161, 161, 0.4);
+  color: black;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+.list_text {
+  width: 180px;
+  padding: 0 5px;
+}
+.list__personal {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  margin: 5px 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.personal__number {
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  background-color: #d9d9d9;
+  text-align: center;
+  border-radius: 2px;
 }/*# sourceMappingURL=style.css.map */

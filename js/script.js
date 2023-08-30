@@ -25,7 +25,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const newListButton = document.querySelector('.list__newlist');
   const newListModal = document.querySelector('.list__modal');
 
-  const listBlock = document.querySelector('.main__list');
+  const listBlock = document.querySelector('.main__list_container');
+
+  const rainbowColors = {
+    red: '#FF0000',
+    orange: '#FFA500',
+    yellow: '#FFFF00',
+    green: '#008000',
+    blue: '#0000FF',
+    indigo: '#4B0082',
+    violet: '#800080',
+  };
 
   // list rec color
   // const listRecColor = innerColorIcon.style.backgroundColor;
@@ -174,18 +184,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const secondColor = 'rgba(255, 184, 53, 0.60)';
     const thirdColor = '#FFD4AA';
     const fourthColor = '#FEDADA';
-    const fivethColor =  'rgba(255, 0, 0, 0.60)';
-    
-    const innerRecColors = [firstColor, secondColor, thirdColor, fourthColor, fivethColor];
+    const fivethColor = 'rgba(255, 0, 0, 0.60)';
+
+    const innerRecColors = [
+      firstColor,
+      secondColor,
+      thirdColor,
+      fourthColor,
+      fivethColor,
+    ];
     let currentInnerIndex = 0;
-    
+
     const listColorIcon = function () {
       innerColorIcon.style.backgroundColor = innerRecColors[currentInnerIndex];
       currentInnerIndex = (currentInnerIndex + 1) % innerRecColors.length;
-    }
-    
+    };
+
     innerColorIcon.addEventListener('click', listColorIcon);
-    
+
     // ----
   };
   const createNewList = function () {
@@ -218,54 +234,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   newListOkButton.addEventListener('click', createNewList);
 
+  // window category list
+  let categoryIsOpen = false;
+
+  const windowOptionCategory = document.querySelector('.option__category');
+  const categoryIcon = document.querySelector('.category__text_icon');
+  const windowCategoryList = document.createElement('ul');
+  windowCategoryList.classList.add('window__category_list');
+  const windowCategoryItem = document.createElement('li');
+  windowCategoryItem.classList.add('window__category_item');
+  windowCategoryItem.textContent = 'item 1';
+  windowCategoryList.appendChild(windowCategoryItem);
+  windowOptionCategory.appendChild(windowCategoryList);
+
+  const optionCategory = function () {
+    categoryIsOpen = !categoryIsOpen;
+
+    if (categoryIsOpen) {
+      categoryIcon.style.transform = 'rotate(180deg)';
+      windowCategoryList.style.display = 'block';
+    } else {
+      categoryIcon.style.transform = 'rotate(0deg)';
+      windowCategoryList.style.display = 'none';
+    }
+  };
+
+  windowOptionCategory.addEventListener('click', optionCategory);
 });
-
-
-// window category list
-let categoryIsOpen = false;
-
-const windowOptionCategory = document.querySelector('.option__category');
-const categoryIcon = document.querySelector('.category__text_icon');
-const windowCategoryList = document.createElement('ul');
-windowCategoryList.classList.add('window__category_list');
-const windowCategoryItem = document.createElement('li');
-windowCategoryItem.classList.add('window__category_item');
-windowCategoryItem.textContent = 'item 1';
-windowCategoryList.appendChild(windowCategoryItem);
-windowOptionCategory.appendChild(windowCategoryList);
-
-const optionCategory = function () {
-  categoryIsOpen = !categoryIsOpen;
-
-  if (categoryIsOpen) {
-    categoryIcon.style.transform = 'rotate(180deg)';
-    windowCategoryList.style.display = 'block';
-  } else {
-    categoryIcon.style.transform = 'rotate(0deg)';
-    windowCategoryList.style.display = 'none';
-  }
-};
-
-windowOptionCategory.addEventListener('click', optionCategory);
-
-
-// const firstColor = 'rgba(0, 194, 255, 0.60)';
-// const secondColor = 'rgba(255, 184, 53, 0.60)';
-// const thirdColor = '#FFD4AA';
-// const fourthColor = '#FEDADA';
-// const fivethColor =  'rgba(255, 0, 0, 0.60)';
-
-// const innerRecColors = [firstColor, secondColor, thirdColor, fourthColor, fivethColor];
-// let currentInnerIndex = 0;
-
-// const innerColorIcon = document.querySelector('.inner__color_icon');
-// const listColorIcon = function () {
-//   this.style.backgroundColor = innerRecColors[currentInnerIndex];
-//   console.log(this.style.backgroundColor)
-//   currentInnerIndex = (currentInnerIndex + 1) % innerRecColors.length;
-// }
-
-// innerColorIcon.addEventListener('click', listColorIcon);
-
-
-

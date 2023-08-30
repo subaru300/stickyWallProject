@@ -191,6 +191,14 @@ body {
 .main {
   // here nothing write yet
   &__list {
+    &_container {
+      overflow: scroll;
+      height: 137px;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: rgba(255, 255, 255, 0);
+      }
+    }
   }
 }
 .list {
@@ -694,18 +702,18 @@ body {
     background-color: #fbfbfb;
     border-radius: 2px;
     position: relative;
-    
+
     // &_rec {
-      //   width: 16px;
-      //   height: 16px;
-      //   border: none;
-      //   border-radius: 2px;
-      //   background: $sidebar-rec-yellow;
-      // }
-      
-      &_text {
-        display: flex;
-        gap: 18px;
+    //   width: 16px;
+    //   height: 16px;
+    //   border: none;
+    //   border-radius: 2px;
+    //   background: $sidebar-rec-yellow;
+    // }
+
+    &_text {
+      display: flex;
+      gap: 18px;
     }
   }
 
@@ -836,7 +844,6 @@ body {
   }
 
   &__btn {
-    
     &_item {
       width: 28px;
       height: 28px;

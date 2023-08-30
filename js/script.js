@@ -174,18 +174,21 @@ document.addEventListener('DOMContentLoaded', function () {
   document;
   buttonsSidebar[3].classList.add('task__active');
 
+
   const newListOkButton = document.querySelector('.inner__btn_item');
   const innerColorIcon = document.querySelector('.inner__color_icon');
+
   const createNewListCategory = function () {
     newListModal.classList.remove('hidden');
     newListButton.classList.add('hidden');
     // ----
+
     const firstColor = 'rgba(0, 194, 255, 0.60)';
     const secondColor = 'rgba(255, 184, 53, 0.60)';
     const thirdColor = '#FFD4AA';
     const fourthColor = '#FEDADA';
     const fivethColor = 'rgba(255, 0, 0, 0.60)';
-
+  
     const innerRecColors = [
       firstColor,
       secondColor,
@@ -194,45 +197,64 @@ document.addEventListener('DOMContentLoaded', function () {
       fivethColor,
     ];
     let currentInnerIndex = 0;
-
+  
     const listColorIcon = function () {
       innerColorIcon.style.backgroundColor = innerRecColors[currentInnerIndex];
       currentInnerIndex = (currentInnerIndex + 1) % innerRecColors.length;
     };
-
+  
     innerColorIcon.addEventListener('click', listColorIcon);
 
+    const newListRec = document.createElement('div');
+    newListRec.classList.add('inner__color_icon');
+    newListRec.style.background = 'rgba(255, 0, 0, 0.60)';
     // ----
   };
+  
   const createNewList = function () {
     const listRecColor = innerColorIcon.style.backgroundColor;
     newListModal.classList.add('hidden');
     newListButton.classList.remove('hidden');
 
+    // new list
     const newListElement = document.createElement('div');
     newListElement.classList.add('list__personal');
 
-    innerColorIcon.style.background = listRecColor;
+    // new list small rec
+    const newListRec = document.createElement('div');
+    newListRec.classList.add('inner__color_icon');
+    newListRec.style.background = listRecColor;
+
+    // new list text
     const listName = document.createElement('div');
     listName.classList.add('list_text');
+
     const inputTextContent = document.querySelector('.inner__input_text');
     listName.textContent = inputTextContent.value;
     inputTextContent.value = '';
 
+    // new list rec with count 
     const listStickerNumber = document.createElement('div');
     listStickerNumber.classList.add('personal__number');
 
-    newListElement.appendChild(innerColorIcon);
+    const newListWrapper = document.querySelector('.main__list_container');
+
+    newListElement.appendChild(newListRec);
     newListElement.appendChild(listName);
     newListElement.appendChild(listStickerNumber);
-
-    listBlock.append(newListElement);
+    
+    newListWrapper.insertBefore(newListElement, newListWrapper.firstElementChild);
+    listBlock.appendChild(newListElement);
   };
 
   // add new list event
   newListButton.addEventListener('click', createNewListCategory);
-
+  
   newListOkButton.addEventListener('click', createNewList);
+
+
+
+
 
   // window category list
   let categoryIsOpen = false;

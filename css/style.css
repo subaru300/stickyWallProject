@@ -659,8 +659,8 @@ body {
   margin-left: 6px;
 }
 .inner__input_text {
-  width: 180px;
-  height: 28px;
+  width: 170px;
+  height: 24.5px;
   border: none;
   border-radius: 4px;
   font-size: 14px;
@@ -668,15 +668,18 @@ body {
   outline: none;
 }
 .inner__btn_item {
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
   background-color: rgba(161, 161, 161, 0.4);
   color: black;
-  border-radius: 4px;
+  border-radius: 2px;
   text-align: center;
-  line-height: 30px;
-  font-size: 14px;
+  font-size: 9.5px;
   font-weight: 500;
+  margin-right: 6px;
+  padding-top: 4px;
+  opacity: 70%;
+  cursor: pointer;
 }
 
 .hidden {

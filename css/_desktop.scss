@@ -849,20 +849,19 @@ body {
     &_item {
       // width: 28px;
       // height: 28px;
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
       background-color: $window-btn-gray;
       color: black;
-      border-radius: 2px;
+      border-radius: 4px;
       text-align: center;
       // line-height: 30px;
       // font-size: 14px;
-      font-size: 9.5px;
+      font-size: 10px;
       font-weight: 500;
       // margin-left: -20%;
-      margin-right: 6px;
-      // padding-top: 5.7px;
-      padding-top: 4px;
+      margin-right: 5.7px;
+      padding-top: 5.7px;
       opacity: 70%;
       cursor: pointer;
     }

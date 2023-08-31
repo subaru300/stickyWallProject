@@ -668,16 +668,16 @@ body {
   outline: none;
 }
 .inner__btn_item {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background-color: rgba(161, 161, 161, 0.4);
   color: black;
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 500;
-  margin-right: 6px;
-  padding-top: 4px;
+  margin-right: 5.7px;
+  padding-top: 5.7px;
   opacity: 70%;
   cursor: pointer;
 }

@@ -523,6 +523,7 @@ body {
       padding: 10px;
       position: relative;
       box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -548,21 +549,25 @@ body {
     }
   }
 
-  // &__card-plus {
-  //   width: 240px;
-  //   height: 240px;
-  //   border-radius: 10px;
-  //   background: $green-bg;
-  //   align-items: center;
-  //   justify-content: center;
-  //   cursor: pointer;
-  //   outline: none;
-  //   overflow: scroll;
-  //   padding: 10px;
-  //   &::-webkit-scrollbar {
-  //     display: none;
-  //   }
-  // }
+  &__time {
+
+    &_block {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 42px;
+      height: 18px;
+      background: $gray-sticker;
+      border-radius: 4px 0 4px 0;
+    }
+  }
+}
+
+.time__block_text {
+  font-size: 10px;
+  text-align: center;
+  line-height: 22px;
+  color: $sidebar-text-black;
 }
 
 .header-bold {
@@ -672,10 +677,10 @@ body {
   }
 }
 
-.window__category_list {
+.window__category_list, .option__date_list {
   width: 108px;
   // max-height: 24px;
-  background: rgb(145, 138, 138);
+  background: #cbcbcb;
   position: absolute;
   top: 24px;
   left: 0px;
@@ -689,6 +694,21 @@ body {
   background: rgb(215, 215, 215);
   text-align: center;
   list-style: none;
+}
+
+.first__list_item, .second__list_item, .third__list_item, .fourth__list_item {
+  width: 108px;
+  height: 24px;
+  background: #fbfbfb;
+  text-align: center;
+  line-height: 24px;
+  list-style: none;
+  cursor: pointer;
+  color: $sidebar-text-black;
+}
+
+.first__list_item:hover, .second__list_item:hover, .third__list_item:hover, .fourth__list_item:hover {
+  background: #f4f4f4;
 }
 
 .option {
@@ -737,6 +757,7 @@ body {
     height: 24px;
     background-color: #fbfbfb;
     border-radius: 2px;
+    position: relative;
   }
 }
 .category {
@@ -826,7 +847,7 @@ body {
     &_icon {
       width: 18px;
       height: 18px;
-      background: $sidebar-rec-red;
+      background: #FF0000;
       border-radius: 2px;
       margin-left: 6px;
     }

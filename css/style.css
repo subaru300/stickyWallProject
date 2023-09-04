@@ -89,6 +89,11 @@ body {
   background: none;
   outline: none;
 }
+.search__text::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
 .search__text::placeholder {
   font-size: 16px;
   font-weight: 500;
@@ -551,7 +556,8 @@ body {
   align-items: center;
 }
 
-.window__category_list, .option__date_list {
+.window__category_list,
+.option__date_list {
   width: 108px;
   background: #cbcbcb;
   position: absolute;
@@ -562,14 +568,26 @@ body {
 }
 
 .window__category_item {
+  display: flex;
   width: 108px;
-  height: 24px;
+  height: auto;
   background: rgb(215, 215, 215);
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
   list-style: none;
+  cursor: pointer;
 }
 
-.first__list_item, .second__list_item, .third__list_item, .fourth__list_item {
+.window__category_color {
+  height: 15px;
+  width: 15px;
+}
+
+.first__list_item,
+.second__list_item,
+.third__list_item,
+.fourth__list_item {
   width: 108px;
   height: 24px;
   background: #fbfbfb;
@@ -580,24 +598,26 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.first__list_item:hover, .second__list_item:hover, .third__list_item:hover, .fourth__list_item:hover {
+.first__list_item:hover,
+.second__list_item:hover,
+.third__list_item:hover,
+.fourth__list_item:hover {
   background: #f4f4f4;
 }
 
 .option__category {
   width: 108px;
   height: 24px;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  padding: 4px;
   background-color: #fbfbfb;
   border-radius: 2px;
   position: relative;
+  cursor: pointer;
 }
 .option__category_text {
   display: flex;
-  gap: 18px;
+  justify-content: space-between;
 }
 .option__calendar {
   display: flex;
@@ -608,6 +628,7 @@ body {
   background-color: #fbfbfb;
   padding: 4px;
   border-radius: 2px;
+  cursor: pointer;
 }
 .option__date {
   display: flex;
@@ -619,15 +640,15 @@ body {
   background-color: #fbfbfb;
   border-radius: 2px;
   position: relative;
+  cursor: pointer;
 }
 
 .category__text_title {
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 184, 53, 0.6);
+  color: #a1a1a1;
   margin-left: 0px;
 }
-
 .calendar__text_title {
   font-size: 14px;
   font-weight: 400;
@@ -647,7 +668,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   z-index: 5;
 }
 
@@ -681,7 +703,7 @@ body {
 .inner__color_icon {
   width: 18px;
   height: 18px;
-  background: #FF0000;
+  background: #ff0000;
   border-radius: 2px;
   margin-left: 6px;
 }
